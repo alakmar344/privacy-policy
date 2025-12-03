@@ -64,6 +64,8 @@
             background-color: #1a1a1a;
         }
 
+
+
         /* Main Content */
         .main-content {
             flex: 1;
@@ -148,6 +150,8 @@
             border-bottom-color: #ffffff;
         }
 
+
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .sidebar {
@@ -169,6 +173,11 @@
 
             h2 {
                 font-size: 1.5rem;
+            }
+
+            .modal-content {
+                margin: 20% auto;
+                width: 95%;
             }
         }
 
@@ -214,7 +223,7 @@
         <!-- Main Content -->
         <main class="main-content">
             <h1>Privacy Policy</h1>
-            <p class="updated">Last Updated:november 30 2025</p>
+            <p class="updated">Last Updated: November 30, 2025</p>
             <p class="intro">Your privacy is a fundamental priority at eSAMz. This Privacy Policy describes how we collect, use, store, protect, and manage information when you access or interact with our service.</p>
 
             <section id="info-collect">
@@ -292,28 +301,26 @@
                 
                 <h3>4.1 Security Standards</h3>
                 <p>We use reasonable administrative, technical, and physical safeguards to protect stored data.</p>
-                <p>These measures include access controls, encrypted storage layers, and restricted administrative access.</p>
+                <p>These measures include access controls, secure storage layers, and restricted administrative access.</p>
 
-                <h3>4.2 Encryption Commitment</h3>
-                <p>Where applicable, logs and metadata may be protected using encryption mechanisms.</p>
-                <p>Any user-held data tied to private keys remains accessible <strong>only to the user's private key</strong>, not to eSAMz or any administrator.</p>
+                <h3>4.2 Session Management</h3>
+                <p>We use UUID-based session identifiers for user recognition. These identifiers are never shared with third parties under any circumstances.</p>
                 <div class="highlight">
-                    <strong>Your data stays with your private key only.</strong>
+                    <strong>Your session data is kept completely confidential.</strong>
                 </div>
 
                 <h3>4.3 Access Restrictions</h3>
-                <p>Only authorized administrators working on debugging or system improvement may view internal logs, and only when required.</p>
+                <p>Only one authorized administrator may view internal logs when required for critical security or technical issues. We do not routinely study or analyze your conversations.</p>
             </section>
 
             <section id="retention">
                 <h2>5. Data Retention Policy</h2>
                 <ul>
-                    <li>Logs are retained <strong>only as long as necessary</strong> to support quality, stability, and security.</li>
-                    <li>Temporary logs may be cleared automatically during scheduled cleanup cycles.</li>
-                    <li>Long-term logs used for analytics or performance tuning are anonymized where possible.</li>
-                    <li>When logs are no longer required, they are permanently deleted through routine data destruction processes.</li>
+                    <li><strong>All chat logs are automatically deleted after 30 days.</strong></li>
+                    <li>This 30-day period serves as a safety buffer for system stability and security monitoring.</li>
+                    <li>After 30 days, all chat content is permanently and irretrievably removed from our systems.</li>
+                    <li>You may request immediate deletion of your data at any time by contacting us.</li>
                 </ul>
-                <p>You may request deletion of identifiable logs if they can be located in our system.</p>
             </section>
 
             <section id="user-rights">
@@ -322,10 +329,10 @@
                 <ul>
                     <li>understand what we collect and why</li>
                     <li>request clarification on our data practices</li>
-                    <li>request deletion of identifiable logs</li>
+                    <li>request immediate deletion of your conversation logs</li>
                     <li>ask questions about data safety</li>
                 </ul>
-                <p>Requests can be made through our official support email.</p>
+                <p>You can exercise your right to deletion by contacting us via email.</p>
             </section>
 
             <section id="children">
@@ -347,6 +354,8 @@
 
             <section id="contact">
                 <h2>9. Contact Information</h2>
+                <p><strong>eSAMz AI</strong><br>
+                Tayyabpura, Mandsaur, Madhya Pradesh, India</p>
                 <p>For questions, concerns, or deletion requests, contact:</p>
                 <p><a href="mailto:esamzai365@gmail.com" class="contact-email">esamzai365@gmail.com</a></p>
             </section>
