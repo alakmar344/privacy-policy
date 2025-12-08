@@ -132,7 +132,14 @@
 
         .highlight {
             background-color: #1a1a1a;
-            border-left: 3px solid #ffffff;
+            border-left: 3px solid #22c55e;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .no-store {
+            background-color: #1a1a1a;
+            border-left: 3px solid #ef4444;
             padding: 1rem 1.5rem;
             margin: 1.5rem 0;
         }
@@ -170,11 +177,6 @@
             h2 {
                 font-size: 1.5rem;
             }
-
-            .modal-content {
-                margin: 20% auto;
-                width: 95%;
-            }
         }
 
         /* Scrollbar */
@@ -203,15 +205,16 @@
             <h2>eSAMz</h2>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#info-collect">Information We Collect</a></li>
-                    <li><a href="#not-collect">What We Don't Collect</a></li>
-                    <li><a href="#data-use">How We Use Your Data</a></li>
-                    <li><a href="#protection">Data Protection & Security</a></li>
-                    <li><a href="#retention">Data Retention</a></li>
-                    <li><a href="#user-rights">User Rights</a></li>
+                    <li><a href="#no-storage">Zero Data Storage</a></li>
+                    <li><a href="#what-not-collect">What We Don't Store</a></li>
+                    <li><a href="#logs-only">System Logs Only</a></li>
+                    <li><a href="#no-dify">No Dify or Third Parties</a></li>
+                    <li><a href="#api-keys">API Key Handling</a></li>
+                    <li><a href="#security">Security</a></li>
+                    <li><a href="#user-rights">Your Rights</a></li>
                     <li><a href="#children">Children's Privacy</a></li>
                     <li><a href="#changes">Policy Changes</a></li>
-                    <li><a href="#contact">Contact Information</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </aside>
@@ -219,143 +222,149 @@
         <!-- Main Content -->
         <main class="main-content">
             <h1>Privacy Policy</h1>
-            <p class="updated">Last Updated: December 3, 2025</p>
-            <p class="intro">Your privacy is a fundamental priority at eSAMz. This Privacy Policy describes how we collect, use, store, protect, and manage information when you access or interact with our service.</p>
+            <p class="updated">Last Updated: December 8, 2024</p>
+            <p class="intro">Your privacy is our absolute priority. eSAMz is built with a zero-storage architecture — we do not store, save, or retain any of your conversations or personal data.</p>
 
-            <section id="info-collect">
-                <h2>1. Information We Collect</h2>
-                
-                <h3>1.1 Chat Logs</h3>
-                <p>We maintain chat logs that may include:</p>
-                <ul>
-                    <li>message content</li>
-                    <li>timestamps</li>
-                    <li>usage patterns</li>
-                    <li>internal system metadata</li>
-                </ul>
-                <p>These logs are essential for:</p>
-                <ul>
-                    <li>improving answer accuracy</li>
-                    <li>detecting and reducing system errors</li>
-                    <li>strengthening safety and abuse-prevention systems</li>
-                    <li>ensuring operational stability and performance</li>
-                </ul>
-
-                <h3>1.2 Technical & Non-Personal Data</h3>
-                <p>We may collect general usage information such as:</p>
-                <ul>
-                    <li>device type</li>
-                    <li>browser type</li>
-                    <li>performance metrics</li>
-                    <li>interaction timing</li>
-                </ul>
-                <p>This information does <strong>not</strong> identify you personally.</p>
-            </section>
-
-            <section id="not-collect">
-                <h2>2. What We Do Not Collect</h2>
-                <p>eSAMz does <strong>not</strong> request or collect:</p>
-                <ul>
-                    <li>login or account registration</li>
-                    <li>email</li>
-                    <li>phone number</li>
-                    <li>government ID</li>
-                    <li>advertising identifiers</li>
-                    <li>biometric data</li>
-                </ul>
-                <p>We do not run hidden trackers, third-party analytics tools, or advertising beacons.</p>
-                <p>We strongly advise users <strong>not</strong> to share:</p>
-                <ul>
-                    <li>passwords</li>
-                    <li>financial data</li>
-                    <li>medical information</li>
-                    <li>private identification details</li>
-                </ul>
-            </section>
-
-            <section id="data-use">
-                <h2>3. How We Use Your Data</h2>
-                <p>All collected information is used <strong>solely for</strong>:</p>
-                <ul>
-                    <li>improving the quality and accuracy of responses</li>
-                    <li>maintaining platform reliability</li>
-                    <li>enhancing security and safety</li>
-                    <li>debugging technical issues</li>
-                    <li>preventing misuse or harmful activity</li>
-                </ul>
-                <p>We <strong>do not</strong>:</p>
-                <ul>
-                    <li>sell user data</li>
-                    <li>rent or trade user information</li>
-                    <li>share logs with advertisers</li>
-                    <li>provide logs to external third parties</li>
-                </ul>
-            </section>
-
-            <section id="protection">
-                <h2>4. Data Protection & Security</h2>
-                
-                <h3>4.1 Security Standards</h3>
-                <p>We use reasonable administrative, technical, and physical safeguards to protect stored data.</p>
-                <p>These measures include access controls, secure storage layers, and restricted administrative access.</p>
-
-                <h3>4.2 Session Management</h3>
-                <p>We use UUID-based session identifiers for user recognition. These identifiers are never shared with third parties under any circumstances.</p>
-                <div class="highlight">
-                    <strong>Your session data is kept completely confidential.</strong>
+            <section id="no-storage">
+                <h2>1. Zero Data Storage Policy</h2>
+                <div class="no-store">
+                    <strong>eSAMz DOES NOT store any of your data.</strong>
                 </div>
-
-                <h3>4.3 Access Restrictions</h3>
-                <p>Only one authorized administrator may view internal logs when required for critical security or technical issues. We do not routinely study or analyze your conversations.</p>
+                <p>We operate on a strict zero-storage principle:</p>
+                <ul>
+                    <li><strong>No conversation history</strong> — Your chats are not saved anywhere</li>
+                    <li><strong>No user profiles</strong> — We don't create or maintain accounts</li>
+                    <li><strong>No message logs</strong> — Your questions and responses are processed in real-time and immediately discarded</li>
+                    <li><strong>No session data</strong> — We don't track your usage across sessions</li>
+                </ul>
+                <p>Every conversation is completely ephemeral. Once you close your browser or refresh the page, everything is gone forever.</p>
             </section>
 
-            <section id="retention">
-                <h2>5. Data Retention Policy</h2>
+            <section id="what-not-collect">
+                <h2>2. What We Absolutely Do NOT Store</h2>
+                <p>eSAMz does <strong>not</strong> collect, store, or retain:</p>
                 <ul>
-                    <li>Chat logs may be retained for operational, safety, debugging, and system performance purposes.</li>
-                    <li>We do not promise automatic deletion on a fixed schedule, as some system-level logs are maintained by our AI service provider.</li>
-                    <li>If you request deletion of your stored conversation data, we will remove all data that we control.</li>
-                    <li>System-level logs maintained by infrastructure providers may not be manually deletable, but they are handled under GDPR-compliant processing agreements.</li>
-                    <li>We comply with GDPR and CCPA by deleting any conversation data we control upon request. Certain system-level logs may be retained by our AI infrastructure provider (Dify) for security, operational, and regulatory purposes under their own GDPR-compliant data processing policies.</li>
+                    <li>❌ Chat messages or conversation content</li>
+                    <li>❌ Personal information (name, email, phone, address)</li>
+                    <li>❌ User accounts or login credentials</li>
+                    <li>❌ IP addresses or device identifiers</li>
+                    <li>❌ Cookies or tracking data</li>
+                    <li>❌ Browsing history or usage patterns</li>
+                    <li>❌ Location data</li>
+                    <li>❌ Biometric data</li>
+                    <li>❌ Financial information</li>
+                    <li>❌ Any personally identifiable information (PII)</li>
+                </ul>
+            </section>
+
+            <section id="logs-only">
+                <h2>3. System Logs (The Only Data We Keep)</h2>
+                <p>The <strong>only</strong> data we collect consists of minimal system logs for technical operations:</p>
+                
+                <h3>3.1 What's in Our Logs</h3>
+                <ul>
+                    <li>HTTP status codes (200 OK, 404 Not Found, 500 Internal Server Error)</li>
+                    <li>Timestamps of requests</li>
+                    <li>General error messages for debugging</li>
+                </ul>
+
+                <h3>3.2 What's NOT in Our Logs</h3>
+                <ul>
+                    <li>❌ Message content</li>
+                    <li>❌ User identifiers</li>
+                    <li>❌ Personal information</li>
+                    <li>❌ IP addresses</li>
+                    <li>❌ Device information</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>These logs are automatically deleted after 24-48 hours</strong> and are used solely for system maintenance and error tracking.
+                </div>
+            </section>
+
+            <section id="no-dify">
+                <h2>4. No Dify, No Third-Party Storage</h2>
+                <p><strong>eSAMz is NOT affiliated with Dify or any third-party data platforms.</strong></p>
+                <p>We do not use:</p>
+                <ul>
+                    <li>❌ Dify</li>
+                    <li>❌ External database services</li>
+                    <li>❌ Cloud storage platforms for user data</li>
+                    <li>❌ Analytics services that track users</li>
+                    <li>❌ Advertising networks</li>
+                    <li>❌ Data brokers or aggregators</li>
+                </ul>
+                <p>Your conversations are processed directly through Google's Gemini API and are not stored by us or any intermediary service.</p>
+            </section>
+
+            <section id="api-keys">
+                <h2>5. API Key Handling</h2>
+                <p>Our Google Gemini API key is:</p>
+                <ul>
+                    <li>✅ Stored securely as a server-side environment variable</li>
+                    <li>✅ Never exposed to clients or browsers</li>
+                    <li>✅ Never logged or saved in any files</li>
+                    <li>✅ Processed only in memory during request handling</li>
+                </ul>
+                <div class="highlight">
+                    <strong>Your messages are sent to Google Gemini for processing, but we do not store them.</strong> Google's data handling is governed by their own privacy policy.
+                </div>
+            </section>
+
+            <section id="security">
+                <h2>6. Security Measures</h2>
+                <p>Even though we don't store your data, we still implement security best practices:</p>
+                <ul>
+                    <li>✅ HTTPS encryption for all communications</li>
+                    <li>✅ Secure server-side API key management</li>
+                    <li>✅ No client-side data persistence</li>
+                    <li>✅ Regular security audits</li>
+                    <li>✅ Minimal attack surface (no databases, no user accounts)</li>
                 </ul>
             </section>
 
             <section id="user-rights">
-                <h2>6. User Rights</h2>
-                <p>You have the right to:</p>
+                <h2>7. Your Rights</h2>
+                <p>Since we don't store any of your data, there is:</p>
                 <ul>
-                    <li>understand what we collect and why</li>
-                    <li>request clarification on our data practices</li>
-                    <li>request deletion of any conversation logs that we store</li>
-                    <li>ask questions about data safety</li>
+                    <li>✅ Nothing to delete (we don't save anything)</li>
+                    <li>✅ Nothing to export (no data exists)</li>
+                    <li>✅ Nothing to correct (no records kept)</li>
+                    <li>✅ No account to deactivate (we don't have accounts)</li>
                 </ul>
-                <p>You can exercise your right to deletion by contacting us via email.</p>
+                <p>You maintain complete control simply by using the service — when you leave, everything is already gone.</p>
             </section>
 
             <section id="children">
-                <h2>7. Children's Privacy</h2>
-                <p>eSAMz is not designed for children under 13.</p>
-                <p>Minors should use the platform only under adult supervision.</p>
+                <h2>8. Children's Privacy</h2>
+                <p>eSAMz does not knowingly collect data from anyone, including children.</p>
+                <p>Since we store no data at all, there is no risk of retaining information from minors.</p>
+                <p>However, we recommend parental supervision for users under 13.</p>
             </section>
 
             <section id="changes">
-                <h2>8. Changes to This Policy</h2>
-                <p>We may update this Privacy Policy periodically to reflect:</p>
+                <h2>9. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy to reflect:</p>
                 <ul>
-                    <li>new service features</li>
-                    <li>legal requirements</li>
-                    <li>security improvements</li>
+                    <li>New features or functionality</li>
+                    <li>Legal or regulatory requirements</li>
+                    <li>Improvements to our privacy practices</li>
                 </ul>
-                <p>Updated versions will be published with revised dates.</p>
+                <p>Any changes will be posted with an updated "Last Updated" date.</p>
             </section>
 
             <section id="contact">
-                <h2>9. Contact Information</h2>
+                <h2>10. Contact Information</h2>
                 <p><strong>eSAMz AI</strong><br>
+                Created by Alakmar Teenwala<br>
                 Tayyabpura, Mandsaur, Madhya Pradesh, India</p>
-                <p>For questions, concerns, or deletion requests, contact:</p>
+                <p>For questions or concerns, contact:</p>
                 <p><a href="mailto:esamzai365@gmail.com" class="contact-email">esamzai365@gmail.com</a></p>
             </section>
+
+            <div class="highlight" style="margin-top: 3rem;">
+                <strong>Summary:</strong> eSAMz operates with complete transparency. We store nothing about you — no messages, no profiles, no tracking. Only minimal system logs (HTTP status codes) are kept temporarily for 24-48 hours. Your privacy is not just protected; it's guaranteed by design.
+            </div>
         </main>
     </div>
 </body>
