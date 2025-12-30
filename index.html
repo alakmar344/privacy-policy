@@ -14,7 +14,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: #000000;
-            color: #e0e0e0;
+            color: #ffffff;
             line-height: 1.6;
         }
 
@@ -32,6 +32,7 @@
             position: fixed;
             height: 100vh;
             overflow-y: auto;
+            transition: transform 0.3s ease;
         }
 
         .sidebar h2 {
@@ -50,7 +51,7 @@
         }
 
         .nav-links a {
-            color: #888888;
+            color: #cccccc;
             text-decoration: none;
             display: block;
             padding: 0.5rem 0.75rem;
@@ -80,14 +81,14 @@
         }
 
         .updated {
-            color: #666666;
+            color: #999999;
             font-style: italic;
             margin-bottom: 2rem;
             font-size: 0.9rem;
         }
 
         .intro {
-            color: #b0b0b0;
+            color: #cccccc;
             margin-bottom: 3rem;
             font-size: 1.05rem;
         }
@@ -104,7 +105,7 @@
         }
 
         h3 {
-            color: #d0d0d0;
+            color: #ffffff;
             font-size: 1.3rem;
             margin-bottom: 1rem;
             margin-top: 1.5rem;
@@ -113,7 +114,7 @@
 
         p {
             margin-bottom: 1rem;
-            color: #b0b0b0;
+            color: #cccccc;
         }
 
         ul {
@@ -123,7 +124,7 @@
 
         ul li {
             margin-bottom: 0.5rem;
-            color: #b0b0b0;
+            color: #cccccc;
         }
 
         strong {
@@ -132,14 +133,14 @@
 
         .highlight {
             background-color: #1a1a1a;
-            border-left: 3px solid #22c55e;
+            border-left: 3px solid #ffffff;
             padding: 1rem 1.5rem;
             margin: 1.5rem 0;
         }
 
         .no-store {
             background-color: #1a1a1a;
-            border-left: 3px solid #ef4444;
+            border-left: 3px solid #cccccc;
             padding: 1rem 1.5rem;
             margin: 1.5rem 0;
         }
@@ -155,25 +156,51 @@
             border-bottom-color: #ffffff;
         }
 
+        /* Mobile Menu Button */
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: #0a0a0a;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                border-right: none;
-                border-bottom: 1px solid #1a1a1a;
+            .menu-toggle {
+                display: block;
             }
-
+            
+            .sidebar {
+                width: 280px;
+                position: fixed;
+                transform: translateX(-100%);
+                height: 100vh;
+                z-index: 999;
+                top: 0;
+                left: 0;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
             .main-content {
                 margin-left: 0;
-                padding: 2rem 1.5rem;
+                padding: 80px 1.5rem 2rem 1.5rem;
             }
-
+            
             h1 {
                 font-size: 2rem;
             }
-
+            
             h2 {
                 font-size: 1.5rem;
             }
@@ -200,21 +227,24 @@
 </head>
 <body>
     <div class="container">
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+        
         <!-- Sidebar Navigation -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <h2>eSAMz</h2>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#no-storage">Zero Data Storage</a></li>
-                    <li><a href="#what-not-collect">What We Don't Store</a></li>
-                    <li><a href="#logs-only">System Logs Only</a></li>
-                    <li><a href="#no-dify">No Dify or Third Parties</a></li>
-                    <li><a href="#api-keys">API Key Handling</a></li>
-                    <li><a href="#security">Security</a></li>
-                    <li><a href="#user-rights">Your Rights</a></li>
-                    <li><a href="#children">Children's Privacy</a></li>
-                    <li><a href="#changes">Policy Changes</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#no-storage" onclick="closeSidebarOnMobile()">Zero Data Storage</a></li>
+                    <li><a href="#what-not-collect" onclick="closeSidebarOnMobile()">What We Don't Store</a></li>
+                    <li><a href="#logs-only" onclick="closeSidebarOnMobile()">System Logs Only</a></li>
+                    <li><a href="#no-dify" onclick="closeSidebarOnMobile()">No Dify or Third Parties</a></li>
+                    <li><a href="#api-keys" onclick="closeSidebarOnMobile()">API Key Handling</a></li>
+                    <li><a href="#security" onclick="closeSidebarOnMobile()">Security</a></li>
+                    <li><a href="#user-rights" onclick="closeSidebarOnMobile()">Your Rights</a></li>
+                    <li><a href="#children" onclick="closeSidebarOnMobile()">Children's Privacy</a></li>
+                    <li><a href="#changes" onclick="closeSidebarOnMobile()">Policy Changes</a></li>
+                    <li><a href="#contact" onclick="closeSidebarOnMobile()">Contact</a></li>
                 </ul>
             </nav>
         </aside>
@@ -367,5 +397,46 @@
             </div>
         </main>
     </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function closeSidebarOnMobile() {
+            if (window.innerWidth <= 768) {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.remove('active');
+            }
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(event.target) && 
+                !menuToggle.contains(event.target) && 
+                sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
