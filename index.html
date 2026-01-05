@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eSAMz Privacy Policy</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -18,12 +14,8 @@
             line-height: 1.6;
         }
 
-        .container {
-            display: flex;
-            min-height: 100vh;
-        }
+        .container { display: flex; min-height: 100vh; }
 
-        /* Sidebar */
         .sidebar {
             width: 280px;
             background-color: #0a0a0a;
@@ -32,23 +24,15 @@
             position: fixed;
             height: 100vh;
             overflow-y: auto;
-            transition: transform 0.3s ease;
         }
 
         .sidebar h2 {
-            color: #ffffff;
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            font-weight: 600;
         }
 
-        .nav-links {
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-bottom: 0.5rem;
-        }
+        .nav-links { list-style: none; }
+        .nav-links li { margin-bottom: 0.5rem; }
 
         .nav-links a {
             color: #cccccc;
@@ -56,8 +40,6 @@
             display: block;
             padding: 0.5rem 0.75rem;
             border-radius: 6px;
-            transition: all 0.2s ease;
-            font-size: 0.9rem;
         }
 
         .nav-links a:hover {
@@ -65,7 +47,6 @@
             background-color: #1a1a1a;
         }
 
-        /* Main Content */
         .main-content {
             flex: 1;
             margin-left: 280px;
@@ -73,373 +54,193 @@
             max-width: 900px;
         }
 
-        h1 {
-            color: #ffffff;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.3rem; margin: 1.5rem 0 1rem; }
+
+        p, li { color: #cccccc; margin-bottom: 0.8rem; }
+
+        ul { margin-left: 2rem; }
 
         .updated {
             color: #999999;
             font-style: italic;
             margin-bottom: 2rem;
-            font-size: 0.9rem;
         }
 
-        .intro {
-            color: #cccccc;
-            margin-bottom: 3rem;
-            font-size: 1.05rem;
-        }
-
-        section {
-            margin-bottom: 3rem;
-        }
-
-        h2 {
-            color: #ffffff;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        h3 {
-            color: #ffffff;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            margin-top: 1.5rem;
-            font-weight: 500;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: #cccccc;
-        }
-
-        ul {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        ul li {
-            margin-bottom: 0.5rem;
-            color: #cccccc;
-        }
-
-        strong {
-            color: #ffffff;
-        }
-
-        .highlight {
+        .highlight, .no-store {
             background-color: #1a1a1a;
             border-left: 3px solid #ffffff;
             padding: 1rem 1.5rem;
             margin: 1.5rem 0;
         }
 
-        .no-store {
-            background-color: #1a1a1a;
-            border-left: 3px solid #cccccc;
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .contact-email {
-            color: #ffffff;
-            text-decoration: none;
-            border-bottom: 1px solid #333333;
-            transition: border-color 0.2s ease;
-        }
-
-        .contact-email:hover {
-            border-bottom-color: #ffffff;
-        }
-
-        /* Mobile Menu Button */
         .menu-toggle {
             display: none;
             position: fixed;
             top: 20px;
             left: 20px;
-            z-index: 1000;
             background: #0a0a0a;
             color: #ffffff;
             border: none;
             padding: 10px;
             cursor: pointer;
-            font-size: 18px;
-            border-radius: 4px;
         }
 
-        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            
-            .sidebar {
-                width: 280px;
-                position: fixed;
-                transform: translateX(-100%);
-                height: 100vh;
-                z-index: 999;
-                top: 0;
-                left: 0;
-            }
-            
-            .sidebar.active {
-                transform: translateX(0);
-            }
-            
-            .main-content {
-                margin-left: 0;
-                padding: 80px 1.5rem 2rem 1.5rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0a0a0a;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #333333;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #444444;
+            .menu-toggle { display: block; }
+            .sidebar { transform: translateX(-100%); }
+            .sidebar.active { transform: translateX(0); }
+            .main-content { margin-left: 0; padding: 80px 1.5rem 2rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Mobile Menu Button -->
-        <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
-        
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar" id="sidebar">
-            <h2>eSAMz</h2>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#no-storage" onclick="closeSidebarOnMobile()">Zero Data Storage</a></li>
-                    <li><a href="#what-not-collect" onclick="closeSidebarOnMobile()">What We Don't Store</a></li>
-                    <li><a href="#logs-only" onclick="closeSidebarOnMobile()">System Logs Only</a></li>
-                    <li><a href="#no-dify" onclick="closeSidebarOnMobile()">No Dify or Third Parties</a></li>
-                    <li><a href="#api-keys" onclick="closeSidebarOnMobile()">API Key Handling</a></li>
-                    <li><a href="#security" onclick="closeSidebarOnMobile()">Security</a></li>
-                    <li><a href="#user-rights" onclick="closeSidebarOnMobile()">Your Rights</a></li>
-                    <li><a href="#children" onclick="closeSidebarOnMobile()">Children's Privacy</a></li>
-                    <li><a href="#changes" onclick="closeSidebarOnMobile()">Policy Changes</a></li>
-                    <li><a href="#contact" onclick="closeSidebarOnMobile()">Contact</a></li>
-                </ul>
-            </nav>
-        </aside>
+<div class="container">
 
-      <main class="main-content">
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last Updated: January 3, 2026</p>
+<button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
 
-    <p class="intro">
-        eSAMz AI is designed with privacy in mind. This Privacy Policy explains what data is processed,
-        where it is stored, and how it is used when you interact with our services.
-    </p>
+<aside class="sidebar" id="sidebar">
+    <h2>eSAMz</h2>
+    <ul class="nav-links">
+        <li><a href="#handling">Data Handling</a></li>
+        <li><a href="#not-collected">Data Not Collected</a></li>
+        <li><a href="#logs">System Logs</a></li>
+        <li><a href="#local">Local Storage</a></li>
+        <li><a href="#third">Third Parties</a></li>
+        <li><a href="#gdpr">GDPR Rights</a></li>
+        <li><a href="#ccpa">CCPA Rights</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</aside>
 
-    <section id="no-storage">
-        <h2>1. How Your Data Is Handled</h2>
-        <div class="no-store">
-            <strong>No server-side chat storage by eSAMz.</strong>
-        </div>
-        <p>
-            eSAMz does not store your conversation content on our servers.
-            Messages are sent to the AI provider only to generate a response and are not retained by us.
-        </p>
-        <p>
-            For user convenience, conversation history and settings may be stored locally
-            in your browser using browser storage technologies such as <strong>localStorage</strong>.
-            This local data never leaves your device unless you actively send a message for processing.
-        </p>
-    </section>
+<main class="main-content">
+<h1>Privacy Policy</h1>
+<p class="updated">Last Updated: January 3, 2026</p>
 
-    <section id="what-not-collect">
-        <h2>2. Data We Do Not Collect on Our Servers</h2>
-        <p>eSAMz does not intentionally collect or store on its servers:</p>
-        <ul>
-            <li>Chat messages or conversation history</li>
-            <li>User accounts or login credentials</li>
-            <li>Names, email addresses, or phone numbers</li>
-            <li>Financial or payment information</li>
-            <li>Voice recordings or raw audio files</li>
-            <li>Biometric or identity data</li>
-        </ul>
-    </section>
+<section id="handling">
+<h2>1. How Data Is Handled</h2>
+<div class="no-store"><strong>No server side chat storage.</strong></div>
+<p>
+eSAMz does not store chat messages or conversation content on its servers.
+Messages are transmitted only to generate a response and are discarded immediately after processing.
+</p>
+</section>
 
-    <section id="logs-only">
-        <h2>3. System Logs</h2>
-        <p>
-            Like most web services, eSAMz maintains minimal technical logs for reliability and security.
-            These logs may include:
-        </p>
-        <ul>
-            <li>Request timestamps</li>
-            <li>HTTP status codes</li>
-            <li>General error information</li>
-        </ul>
-        <p>
-            These logs are used strictly for system maintenance and abuse prevention and are retained
-            for a limited period, typically no longer than 24–48 hours.
-        </p>
-    </section>
+<section id="not-collected">
+<h2>2. Data We Do Not Collect</h2>
+<ul>
+<li>Chat transcripts</li>
+<li>User accounts or passwords</li>
+<li>Email addresses or phone numbers</li>
+<li>Payment information</li>
+<li>Voice recordings or audio data</li>
+<li>Biometric identifiers</li>
+</ul>
+</section>
 
-    <section id="local-storage">
-        <h2>4. Local Browser Storage</h2>
-        <p>
-            eSAMz may store the following data locally on your device:
-        </p>
-        <ul>
-            <li>Conversation history for your convenience</li>
-            <li>Interface preferences and settings</li>
-            <li>Voice configuration choices</li>
-        </ul>
-        <p>
-            This information is stored entirely within your browser and can be cleared at any time
-            by using your browser settings or the in-app clear history option.
-        </p>
-    </section>
+<section id="logs">
+<h2>3. System Logs</h2>
+<p>
+Minimal technical logs are maintained strictly for security and abuse prevention.
+These logs may include timestamps and response codes and are retained for no longer than 48 hours.
+</p>
+</section>
 
-    <section id="third-party">
-        <h2>5. Third-Party Services</h2>
-        <p>
-            eSAMz relies on third-party services to operate:
-        </p>
-        <ul>
-            <li><strong>AI Providers (e.g. Sarvam)</strong> — Messages are sent for response generation and handled according to their privacy policies.</li>
-            <li><strong>Advertising Services</strong> — Ads may be served by third-party networks such as Google AdSense, which may use cookies or similar technologies.</li>
-            <li><strong>Content Delivery Networks (CDNs)</strong> — Used to deliver fonts and scripts efficiently.</li>
-        </ul>
-        <p>
-            We do not control how third-party services process data. Please review their respective privacy policies.
-        </p>
-    </section>
+<section id="local">
+<h2>4. Local Browser Storage</h2>
+<p>
+Some data such as interface preferences and conversation history may be stored locally in your browser.
+This data never leaves your device and can be deleted at any time using browser controls.
+</p>
+</section>
 
-    <section id="api-keys">
-        <h2>6. API Key Security</h2>
-        <p>
-            All API keys used by eSAMz are stored securely on the server and are never exposed to users.
-            Requests are handled in-memory and are not logged with message content.
-        </p>
-    </section>
+<section id="third">
+<h2>5. Third Party Services</h2>
+<ul>
+<li>AI inference providers for response generation</li>
+<li>Advertising networks such as Google AdSense</li>
+<li>Content delivery networks</li>
+</ul>
+<p>
+Third party services operate under their own privacy policies.
+</p>
+</section>
 
-    <section id="security">
-        <h2>7. Security Measures</h2>
-        <ul>
-            <li>HTTPS encryption for all communications</li>
-            <li>Server-side protection of API credentials</li>
-            <li>No user account system</li>
-            <li>Minimal data retention</li>
-        </ul>
-    </section>
+<section id="gdpr">
+<h2>6. GDPR Compliance</h2>
+<p>
+For users in the European Economic Area, eSAMz complies with the General Data Protection Regulation.
+</p>
+<ul>
+<li>Lawful basis: legitimate interest and user initiated requests</li>
+<li>Right to access, rectification, and erasure</li>
+<li>Right to restrict or object to processing</li>
+<li>Right to data portability where applicable</li>
+</ul>
+<p>
+As no personal data is stored server side, most requests can be fulfilled instantly by clearing local browser data.
+</p>
+</section>
 
-    <section id="user-rights">
-        <h2>8. Your Control and Rights</h2>
-        <p>
-            You control your locally stored data. You may:
-        </p>
-        <ul>
-            <li>Clear conversation history at any time</li>
-            <li>Export conversations manually</li>
-            <li>Stop using the service without creating an account</li>
-        </ul>
-    </section>
+<section id="ccpa">
+<h2>7. CCPA and CPRA Compliance</h2>
+<p>
+For California residents, eSAMz does not sell, rent, or share personal information.
+</p>
+<ul>
+<li>No personal data sale</li>
+<li>No profiling</li>
+<li>No cross site behavioral tracking</li>
+</ul>
+<p>
+You may request disclosure or deletion of any applicable data by contacting us.
+</p>
+</section>
 
-    <section id="children">
-        <h2>9. Children’s Privacy</h2>
-        <p>
-            eSAMz is not designed specifically for children under 13.
-            We do not knowingly collect personal data from minors.
-        </p>
-    </section>
+<section id="security">
+<h2>8. Security Measures</h2>
+<ul>
+<li>HTTPS encryption</li>
+<li>Server side API key protection</li>
+<li>No account system</li>
+<li>Minimal retention architecture</li>
+</ul>
+</section>
 
-    <section id="changes">
-        <h2>10. Changes to This Policy</h2>
-        <p>
-            This Privacy Policy may be updated periodically.
-            The “Last Updated” date will reflect the latest revision.
-        </p>
-    </section>
+<section id="children">
+<h2>9. Children’s Privacy</h2>
+<p>
+eSAMz is not intended for children under 13 and does not knowingly collect personal data from minors.
+</p>
+</section>
 
-    <section id="contact">
-        <h2>11. Contact Information</h2>
-        <p>
-            <strong>eSAMz AI</strong><br>
-            Created by Alakmar Teenwala<br>
-            Mandsaur, Madhya Pradesh, India
-        </p>
-        <p>
-            Contact: <a href="mailto:esamzai365@gmail.com" class="contact-email">esamzai365@gmail.com</a>
-        </p>
-    </section>
+<section id="contact">
+<h2>10. Contact</h2>
+<p>
+<strong>eSAMz AI</strong><br>
+Created by Alakmar Teenwala<br>
+Mandsaur, Madhya Pradesh, India
+</p>
+<p>Email: esamzai365@gmail.com</p>
+</section>
 
-    <div class="highlight" style="margin-top: 3rem;">
-        <strong>Summary:</strong>
-        eSAMz does not store chat content on its servers. Some data may be stored locally on your device
-        for usability. Third-party services may process limited data as required to operate the service.
-    </div>
+<div class="highlight">
+<strong>Summary:</strong>
+eSAMz is designed with privacy first architecture. No conversations are stored. No voice data is processed.
+</div>
+
 </main>
-    </div>
+</div>
 
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-        }
+<script>
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('active');
+}
+</script>
 
-        function closeSidebarOnMobile() {
-            if (window.innerWidth <= 768) {
-                const sidebar = document.getElementById('sidebar');
-                sidebar.classList.remove('active');
-            }
-        }
-
-        // Close sidebar when clicking outside on mobile
-        document.addEventListener('click', function(event) {
-            const sidebar = document.getElementById('sidebar');
-            const menuToggle = document.querySelector('.menu-toggle');
-            
-            if (window.innerWidth <= 768 && 
-                !sidebar.contains(event.target) && 
-                !menuToggle.contains(event.target) && 
-                sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
+
