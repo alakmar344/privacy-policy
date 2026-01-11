@@ -3,267 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eSAMz Privacy Policy</title>
+    <title>Privacy Policy - eSAMz AI</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --bg-main: #000000;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --text-tertiary: #9ca3af;
+            --border-subtle: rgba(55, 65, 81, 0.4);
+            --bg-card: rgba(20, 20, 20, 0.6);
+            --highlight: #e5e7eb;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #000000;
-            color: #ffffff;
-            line-height: 1.6;
+            background: var(--bg-main);
+            color: var(--text-secondary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container { display: flex; min-height: 100vh; }
-
-        .sidebar {
-            width: 280px;
-            background-color: #0a0a0a;
-            padding: 2rem 1.5rem;
-            border-right: 1px solid #1a1a1a;
+        body::before {
+            content: '';
             position: fixed;
-            height: 100vh;
-            overflow-y: auto;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03), transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.02), transparent 50%);
+            pointer-events: none;
+            z-index: 0;
         }
 
-        .sidebar h2 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+            position: relative;
+            z-index: 1;
         }
 
-        .nav-links { list-style: none; }
-        .nav-links li { margin-bottom: 0.5rem; }
+        header {
+            margin-bottom: 48px;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 24px;
+        }
 
-        .nav-links a {
-            color: #cccccc;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
             text-decoration: none;
-            display: block;
-            padding: 0.5rem 0.75rem;
-            border-radius: 6px;
+            color: var(--text-primary);
+            width: fit-content;
         }
 
-        .nav-links a:hover {
-            color: #ffffff;
-            background-color: #1a1a1a;
+        .brand svg { width: 32px; height: 32px; }
+
+        h1 {
+            color: var(--text-primary);
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
         }
 
-        .main-content {
-            flex: 1;
-            margin-left: 280px;
-            padding: 3rem 4rem;
-            max-width: 900px;
+        .last-updated {
+            color: var(--text-tertiary);
+            font-size: 13px;
+            font-weight: 500;
         }
 
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
-        h3 { font-size: 1.3rem; margin: 1.5rem 0 1rem; }
-
-        p, li { color: #cccccc; margin-bottom: 0.8rem; }
-
-        ul { margin-left: 2rem; }
-
-        .updated {
-            color: #999999;
-            font-style: italic;
-            margin-bottom: 2rem;
+        h2 {
+            color: var(--text-primary);
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 16px;
         }
 
-        .highlight, .no-store {
-            background-color: #1a1a1a;
-            border-left: 3px solid #ffffff;
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
+        p { margin-bottom: 16px; }
+
+        ul {
+            margin-bottom: 24px;
+            padding-left: 20px;
+            color: var(--text-secondary);
         }
 
-        .menu-toggle {
-            display: none;
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: #0a0a0a;
-            color: #ffffff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 100;
+        li { margin-bottom: 8px; }
+
+        strong { color: var(--text-primary); font-weight: 600; }
+
+        .contact-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 48px;
         }
 
-        @media (max-width: 768px) {
-            .menu-toggle { display: block; }
-            .sidebar { transform: translateX(-100%); }
-            .sidebar.active { transform: translateX(0); }
-            .main-content { margin-left: 0; padding: 80px 1.5rem 2rem; }
+        .contact-box h3 {
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid transparent;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+            border-bottom-color: var(--text-primary);
         }
     </style>
 </head>
 <body>
-<div class="container">
 
-<button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+    <div class="container">
+        <header>
+            <a href="/" class="brand">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#d1d5db;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#9ca3af;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="85" cy="90" rx="45" ry="60" fill="url(#grad1)" opacity="0.8"/>
+                    <ellipse cx="115" cy="110" rx="45" ry="60" fill="url(#grad1)" opacity="0.6"/>
+                </svg>
+                <span style="font-weight: 600; font-size: 18px;">eSAMz AI</span>
+            </a>
+            <h1>Privacy Policy</h1>
+            <span class="last-updated">Last Updated: January 11, 2026</span>
+        </header>
 
-<aside class="sidebar" id="sidebar">
-    <h2>eSAMz</h2>
-    <ul class="nav-links">
-        <li><a href="#handling">Data Handling</a></li>
-        <li><a href="#sessions">Session Memory</a></li>
-        <li><a href="#not-collected">Data Not Collected</a></li>
-        <li><a href="#logs">System Logs</a></li>
-        <li><a href="#local">Local Storage</a></li>
-        <li><a href="#third">Third Parties</a></li>
-        <li><a href="#gdpr">GDPR Rights</a></li>
-        <li><a href="#ccpa">CCPA Rights</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#children">Children</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</aside>
+        <section>
+            <h2>1. How Data Is Handled</h2>
+            <p>eSAMz prioritizes user privacy through a "Privacy First" architecture. We process your messages in real-time to generate responses and strictly limit data retention.</p>
+            <p>We do not create permanent user accounts, profiles, or login credentials for general usage. You interact with eSAMz largely anonymously via session identifiers.</p>
 
-<main class="main-content">
-<h1>Privacy Policy</h1>
-<p class="updated">Last Updated: January 3, 2026</p>
+            <h2>2. Session Memory & Cookies</h2>
+            <p><strong>Session Persistence:</strong> To provide a seamless conversation experience and remember your chat context, eSAMz uses a browser Cookie (named <code>esamz_sid</code>).</p>
+            <ul>
+                <li><strong>Duration:</strong> This cookie is set to expire after <strong>30 days</strong>. This allows you to return to the site without immediately losing your conversation history.</li>
+                <li><strong>Content:</strong> The cookie itself contains only a random session ID. The actual conversation history associated with this ID is stored temporarily in our active memory to facilitate the chat.</li>
+                <li><strong>Control:</strong> You can delete this cookie at any time via your browser settings ("Clear Browsing Data"). Doing so will reset your session and clear the AI's memory of your current conversation.</li>
+            </ul>
 
-<section id="handling">
-<h2>1. How Data Is Handled</h2>
-<p>
-eSAMz prioritizes user privacy through a "Privacy First" architecture. 
-We process your messages in real-time to generate responses and strictly limit data retention.
-</p>
-<p>
-We do not create permanent user accounts, profiles, or login credentials. 
-You interact with eSAMz anonymously via temporary session identifiers.
-</p>
-</section>
+            <h2>3. Data We Do Not Collect</h2>
+            <p>Beyond the session context mentioned above, we restrict our data collection as follows:</p>
+            <ul>
+                <li><strong>Permanent Transcripts:</strong> We do not maintain permanent, long-term archives of your conversations once they are cleared from active memory.</li>
+                <li><strong>Voice Data:</strong> We do not store voice recordings. Voice input is processed locally or via your browser's speech recognition service; only the text transcript is sent to our server.</li>
+                <li><strong>Email Addresses:</strong> We do not collect email addresses for general users. 
+                <br><em>Exception: If you purchase an "Ad-Free" or Premium license, we store your email address solely to verify your license key validity.</em></li>
+                <li><strong>Payment Information:</strong> We do not store credit card or payment details.</li>
+                <li><strong>Biometrics:</strong> We do not collect biometric identifiers.</li>
+            </ul>
 
-<section id="sessions">
-<h2>2. Session Memory & Cookies</h2>
-<div class="highlight">
-<strong>Short-Term Context:</strong> To provide a coherent conversation experience, eSAMz uses temporary session memory.
-</div>
-<p>
-To facilitate this, we use a browser "Cookie" (named <code>esamz_sid</code>). 
-This cookie contains a random session ID that allows our server to recognize you during a single visit.
-</p>
-<ul>
-    <li><strong>Duration:</strong> Session data is retained in volatile memory for the duration of your active use. If you are inactive or close your browser, this data is discarded.</li>
-    <li><strong>Content:</strong> This memory may include recent chat context to help the AI understand the flow of conversation.</li>
-    <li><strong>Control:</strong> You can disable this cookie at any time via your browser settings, though this will reset the AI's memory of the current conversation.</li>
-</ul>
-</section>
+            <h2>4. System Logs</h2>
+            <p>Minimal technical logs are maintained strictly for security, debugging, and abuse prevention. These logs may include request timestamps and response codes. Access logs are retained for short periods (typically 48 hours) and are then deleted.</p>
 
-<section id="not-collected">
-<h2>3. Data We Do Not Collect</h2>
-<p>
-Beyond the temporary session context mentioned above, we do not collect or store the following:
-</p>
-<ul>
-<li>Permanent chat transcripts or archives</li>
-<li>User accounts, usernames, or passwords</li>
-<li>Email addresses or phone numbers</li>
-<li>Payment information</li>
-<li>Voice recordings or audio data</li>
-<li>Biometric identifiers</li>
-</ul>
-</section>
+            <h2>5. Local Browser Storage</h2>
+            <p>We store your chat history locally on your device (using <code>localStorage</code>). This ensures you have immediate access to past conversations without us needing to permanently warehouse them on our servers. You can clear this data at any time using the "Clear History" button in the app.</p>
 
-<section id="logs">
-<h2>4. System Logs</h2>
-<p>
-Minimal technical logs are maintained strictly for security, debugging, and abuse prevention.
-These logs may include request timestamps and response codes. 
-Access logs are retained for no longer than 48 hours and are then permanently deleted.
-</p>
-</section>
+            <h2>6. Third Party Services</h2>
+            <ul>
+                <li><strong>AI Inference:</strong> We use third-party AI providers (e.g., Sarvam AI) to process your messages. Your message is sent to them solely to generate the reply.</li>
+                <li><strong>Advertising:</strong> Free users may be served ads via networks such as Google AdSense.</li>
+                <li><strong>Infrastructure:</strong> We use Vercel and Upstash Redis for hosting and temporary data caching.</li>
+            </ul>
+            <p>Third party services operate under their own independent privacy policies.</p>
 
-<section id="local">
-<h2>5. Local Browser Storage</h2>
-<p>
-We may store interface preferences locally on your device (using LocalStorage). 
-This data never leaves your device and can be deleted at any time using your browser's "Clear History" or "Clear Site Data" controls.
-</p>
-</section>
+            <h2>7. GDPR Compliance</h2>
+            <p>For users in the European Economic Area, eSAMz complies with the General Data Protection Regulation (GDPR).</p>
+            <ul>
+                <li><strong>Lawful basis:</strong> Legitimate interest (providing the service) and user consent.</li>
+                <li><strong>Right to erasure:</strong> You can effectively erase your data by clearing your browser cookies and local storage, which severs the link to any temporary server-side session data.</li>
+            </ul>
 
-<section id="third">
-<h2>6. Third Party Services</h2>
-<ul>
-<li><strong>AI Inference:</strong> We use third-party AI providers (e.g., Sarvam AI) to process your messages and generate responses. Your message is sent to them solely to generate the reply and is not stored by them beyond their operational needs.</li>
-<li><strong>Advertising:</strong> We may use advertising networks such as Google AdSense.</li>
-<li><strong>Infrastructure:</strong> Content delivery networks (CDNs) may be used to serve static assets.</li>
-</ul>
-<p>
-Third party services operate under their own independent privacy policies.
-</p>
-</section>
+            <h2>8. CCPA Compliance</h2>
+            <p>For California residents, eSAMz does not sell your personal information. We do not use your data for profiling or cross-site behavioral tracking.</p>
 
-<section id="gdpr">
-<h2>7. GDPR Compliance</h2>
-<p>
-For users in the European Economic Area, eSAMz complies with the General Data Protection Regulation (GDPR).
-</p>
-<ul>
-<li>Lawful basis: Legitimate interest (providing the requested service) and user consent (via use of the service).</li>
-<li>Right to access: You can view the data processed during your session.</li>
-<li>Right to rectification: You can correct information by simply chatting with the AI.</li>
-<li>Right to erasure ("Right to be Forgotten"): Since we do not permanently store data, clearing your browser cookies or closing the session effectively erases your data from our systems immediately.</li>
-<li>Right to data portability: Not applicable, as no long-term personal data store is maintained.</li>
-</ul>
-</section>
+            <h2>9. Security Measures</h2>
+            <ul>
+                <li><strong>Encryption:</strong> All data is transmitted over HTTPS.</li>
+                <li><strong>API Protection:</strong> Server-side API keys are protected and never exposed to the client.</li>
+                <li><strong>Minimal Retention:</strong> Data is discarded when no longer needed for the active session context.</li>
+            </ul>
 
-<section id="ccpa">
-<h2>8. CCPA and CPRA Compliance</h2>
-<p>
-For California residents, eSAMz does not sell, rent, or share personal information.
-</p>
-<ul>
-<li>No personal data sale</li>
-<li>No profiling for marketing purposes</li>
-<li>No cross-site behavioral tracking</li>
-</ul>
-<p>
-You may request disclosure or deletion of any applicable data by clearing your local browser data or contacting us.
-</p>
-</section>
+            <h2>10. Children’s Privacy</h2>
+            <p>eSAMz is not intended for children under 13 and does not knowingly collect personal data from minors.</p>
 
-<section id="security">
-<h2>9. Security Measures</h2>
-<ul>
-<li><strong>Encryption:</strong> All data is transmitted over HTTPS.</li>
-<li><strong>API Protection:</strong> Server-side API keys are protected and never exposed to the client.</li>
-<li><strong>No Accounts:</strong> We eliminate the risk of password breaches by not having user accounts.</li>
-<li><strong>Minimal Retention:</strong> Data is discarded as soon as it is no longer needed for the immediate session.
-</li>
-</ul>
-</section>
+            <div class="contact-box">
+                <h3>11. Contact</h3>
+                <p><strong>eSAMz AI</strong><br>
+                Created by Alakmar Teenwala<br>
+                Mandsaur, Madhya Pradesh, India<br>
+                Email: <a href="mailto:esamzai365@gmail.com" style="color: #fff;">esamzai365@gmail.com</a></p>
+            </div>
 
-<section id="children">
-<h2>10. Children’s Privacy</h2>
-<p>
-eSAMz is not intended for children under 13 and does not knowingly collect personal data from minors.
-</p>
-</section>
-
-<section id="contact">
-<h2>11. Contact</h2>
-<p>
-<strong>eSAMz AI</strong><br>
-Created by Alakmar Teenwala<br>
-Mandsaur, Madhya Pradesh, India
-</p>
-<p>Email: esamzai365@gmail.com</p>
-</section>
-
-<div class="highlight">
-<strong>Summary:</strong>
-eSAMz is designed with privacy-first architecture. We use temporary session memory (Cookies) to improve experience, but we do not maintain permanent chat logs or user databases. Your data is ephemeral.
-</div>
-
-</main>
-</div>
-
-<script>
-function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('active');
-}
-</script>
+            <a href="/" class="back-link">← Return to eSAMz AI</a>
+        </section>
+    </div>
 
 </body>
 </html>
