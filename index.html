@@ -21,7 +21,6 @@
             --text-tertiary: #9ca3af;
             --border-subtle: rgba(55, 65, 81, 0.4);
             --bg-card: rgba(20, 20, 20, 0.6);
-            --highlight: #e5e7eb;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -160,63 +159,55 @@
         <section>
             <h2>1. How Data Is Handled</h2>
             <p>eSAMz prioritizes user privacy through a "Privacy First" architecture. We process your messages in real-time to generate responses and strictly limit data retention.</p>
-            <p>We do not create permanent user accounts, profiles, or login credentials for general usage. You interact with eSAMz largely anonymously via session identifiers.</p>
+            <p>We do not create permanent user accounts or profiles for general usage. You interact with eSAMz largely anonymously via session identifiers.</p>
 
             <h2>2. Session Memory & Cookies</h2>
-            <p><strong>Session Persistence:</strong> To provide a seamless conversation experience and remember your chat context, eSAMz uses a browser Cookie (named <code>esamz_sid</code>).</p>
+            <p><strong>Session Persistence:</strong> To provide a seamless conversation experience, eSAMz uses a browser Cookie (named <code>esamz_sid</code>).</p>
             <ul>
                 <li><strong>Duration:</strong> This cookie is set to expire after <strong>30 days</strong>. This allows you to return to the site without immediately losing your conversation history.</li>
                 <li><strong>Content:</strong> The cookie itself contains only a random session ID. The actual conversation history associated with this ID is stored temporarily in our active memory to facilitate the chat.</li>
-                <li><strong>Control:</strong> You can delete this cookie at any time via your browser settings ("Clear Browsing Data"). Doing so will reset your session and clear the AI's memory of your current conversation.</li>
+                <li><strong>Control:</strong> You can delete this cookie at any time via your browser settings. Doing so will reset your session.</li>
             </ul>
 
             <h2>3. Data We Do Not Collect</h2>
-            <p>Beyond the session context mentioned above, we restrict our data collection as follows:</p>
+            <p>We minimize data collection to the absolute essentials:</p>
             <ul>
                 <li><strong>Permanent Transcripts:</strong> We do not maintain permanent, long-term archives of your conversations once they are cleared from active memory.</li>
-                <li><strong>Voice Data:</strong> We do not store voice recordings. Voice input is processed locally or via your browser's speech recognition service; only the text transcript is sent to our server.</li>
-                <li><strong>Email Addresses:</strong> We do not collect email addresses for general users. 
-                <br><em>Exception: If you purchase an "Ad-Free" or Premium license, we store your email address solely to verify your license key validity.</em></li>
+                <li><strong>Voice Data:</strong> We do not store voice recordings. Voice input is processed locally or via your browser's speech recognition service.</li>
+                <li><strong>Email Addresses:</strong> We do not collect email addresses for general users.
+                <br><em>Exceptions: 
+                1. If you purchase a Premium license, we store your email to verify your key.
+                2. If you voluntarily email us for support or partnerships, we retain that correspondence.</em></li>
                 <li><strong>Payment Information:</strong> We do not store credit card or payment details.</li>
-                <li><strong>Biometrics:</strong> We do not collect biometric identifiers.</li>
             </ul>
 
             <h2>4. System Logs</h2>
             <p>Minimal technical logs are maintained strictly for security, debugging, and abuse prevention. These logs may include request timestamps and response codes. Access logs are retained for short periods (typically 48 hours) and are then deleted.</p>
 
             <h2>5. Local Browser Storage</h2>
-            <p>We store your chat history locally on your device (using <code>localStorage</code>). This ensures you have immediate access to past conversations without us needing to permanently warehouse them on our servers. You can clear this data at any time using the "Clear History" button in the app.</p>
+            <p>We store your chat history locally on your device (using <code>localStorage</code>). This ensures you have immediate access to past conversations without us needing to permanently warehouse them on our servers.</p>
 
             <h2>6. Third Party Services</h2>
             <ul>
-                <li><strong>AI Inference:</strong> We use third-party AI providers (e.g., Sarvam AI) to process your messages. Your message is sent to them solely to generate the reply.</li>
+                <li><strong>AI Inference:</strong> We use third-party AI providers (e.g., Sarvam AI) to generate responses.</li>
+                <li><strong>Analytics:</strong> We use <strong>Google Analytics</strong> to understand website traffic trends (e.g., "How many users visited today?"). This service collects anonymous usage data and may use its own cookies.</li>
                 <li><strong>Advertising:</strong> Free users may be served ads via networks such as Google AdSense.</li>
-                <li><strong>Infrastructure:</strong> We use Vercel and Upstash Redis for hosting and temporary data caching.</li>
+                <li><strong>Infrastructure:</strong> We use Vercel and Upstash Redis for hosting and caching.</li>
             </ul>
             <p>Third party services operate under their own independent privacy policies.</p>
 
-            <h2>7. GDPR Compliance</h2>
-            <p>For users in the European Economic Area, eSAMz complies with the General Data Protection Regulation (GDPR).</p>
+            <h2>7. GDPR & CCPA Compliance</h2>
+            <p>eSAMz respects your rights under GDPR (Europe) and CCPA (California).</p>
             <ul>
-                <li><strong>Lawful basis:</strong> Legitimate interest (providing the service) and user consent.</li>
-                <li><strong>Right to erasure:</strong> You can effectively erase your data by clearing your browser cookies and local storage, which severs the link to any temporary server-side session data.</li>
+                <li><strong>Right to erasure:</strong> You can effectively erase your data by clearing your browser cookies and local storage.</li>
+                <li><strong>No Sale of Data:</strong> We do not sell your personal information or conversation data.</li>
             </ul>
 
-            <h2>8. CCPA Compliance</h2>
-            <p>For California residents, eSAMz does not sell your personal information. We do not use your data for profiling or cross-site behavioral tracking.</p>
-
-            <h2>9. Security Measures</h2>
-            <ul>
-                <li><strong>Encryption:</strong> All data is transmitted over HTTPS.</li>
-                <li><strong>API Protection:</strong> Server-side API keys are protected and never exposed to the client.</li>
-                <li><strong>Minimal Retention:</strong> Data is discarded when no longer needed for the active session context.</li>
-            </ul>
-
-            <h2>10. Children’s Privacy</h2>
+            <h2>8. Children’s Privacy</h2>
             <p>eSAMz is not intended for children under 13 and does not knowingly collect personal data from minors.</p>
 
             <div class="contact-box">
-                <h3>11. Contact</h3>
+                <h3>9. Contact</h3>
                 <p><strong>eSAMz AI</strong><br>
                 Created by Alakmar Teenwala<br>
                 Mandsaur, Madhya Pradesh, India<br>
