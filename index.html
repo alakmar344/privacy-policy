@@ -161,18 +161,18 @@
             <p>eSAMz prioritizes user privacy through a "Privacy First" architecture. We process your messages in real-time to generate responses and strictly limit data retention.</p>
             <p>We do not create permanent user accounts or profiles for general usage. You interact with eSAMz largely anonymously via session identifiers.</p>
 
-            <h2>2. Session Memory & No Cookies</h2>
-            <p><strong>Zero-Cookie Architecture:</strong> eSAMz v10.1 no longer uses browser cookies for session tracking.</p>
+            <h2>2. Session Memory & Cookies</h2>
+            <p><strong>Strict 30-Minute Retention:</strong> eSAMz v10.2 uses a temporary session cookie (<code>esamz_sid</code>) to manage your active conversation.</p>
             <ul>
-                <li><strong>Short-Term Retention:</strong> Your conversation context is held in our secure active memory (Redis) for only <strong>30 minutes</strong> from your last interaction.</li>
-                <li><strong>Automatic Deletion:</strong> If you are inactive for more than 30 minutes, the server automatically wipes the conversation memory immediately.</li>
-                <li><strong>Session ID:</strong> A random session identifier is stored temporarily in your browser's local storage (not a cookie) to maintain the chat connection while you are active.</li>
+                <li><strong>Short-Term Memory:</strong> This cookie and the associated server memory are strictly set to expire after <strong>30 minutes</strong> of inactivity.</li>
+                <li><strong>Automatic Wipe:</strong> If you stop interacting with the chat for 30 minutes, the server automatically wipes the memory of that conversation. When you return, you will start fresh with a new session ID.</li>
+                <li><strong>No Tracking:</strong> This cookie is only used to link your current messages together. It is not used for cross-site tracking or advertising profiling.</li>
             </ul>
 
             <h2>3. Data We Do Not Collect</h2>
             <p>We minimize data collection to the absolute essentials:</p>
             <ul>
-                <li><strong>Permanent Transcripts:</strong> We do not maintain permanent, long-term archives of your conversations once they are cleared from active memory.</li>
+                <li><strong>Permanent Transcripts:</strong> We do not maintain permanent, long-term archives of your conversations once they are cleared from active memory (30 mins limit).</li>
                 <li><strong>Voice Data:</strong> We do not store voice recordings. Voice input is processed locally or via your browser's speech recognition service.</li>
                 <li><strong>Email Addresses:</strong> We do not collect email addresses for general users.
                 <br><em>Exceptions: 
@@ -185,7 +185,7 @@
             <p>Minimal technical logs are maintained strictly for security, debugging, and abuse prevention. These logs may include request timestamps and response codes. Access logs are retained for short periods (typically 48 hours) and are then deleted.</p>
 
             <h2>5. Local Browser Storage</h2>
-            <p>We store your chat history locally on your device (using <code>localStorage</code>). This ensures you have immediate access to past conversations without us needing to permanently warehouse them on our servers.</p>
+            <p>We store your chat history locally on your device (using <code>localStorage</code>). This ensures you have immediate access to past conversations while you are viewing the page, without us needing to permanently warehouse them on our servers.</p>
 
             <h2>6. Third Party Services</h2>
             <ul>
@@ -199,7 +199,7 @@
             <h2>7. GDPR & CCPA Compliance</h2>
             <p>eSAMz respects your rights under GDPR (Europe) and CCPA (California).</p>
             <ul>
-                <li><strong>Right to erasure:</strong> You can effectively erase your data by clearing your browser's local storage or simply waiting 30 minutes for server deletion.</li>
+                <li><strong>Right to erasure:</strong> Your data effectively erases itself after 30 minutes of inactivity. You can also manually clear your browser cookies to sever the link immediately.</li>
                 <li><strong>No Sale of Data:</strong> We do not sell your personal information or conversation data.</li>
             </ul>
 
