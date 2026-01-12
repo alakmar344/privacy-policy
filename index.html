@@ -153,7 +153,7 @@
                 <span style="font-weight: 600; font-size: 18px;">eSAMz AI</span>
             </a>
             <h1>Privacy Policy</h1>
-            <span class="last-updated">Last Updated: January 11, 2026</span>
+            <span class="last-updated">Last Updated: January 12, 2026</span>
         </header>
 
         <section>
@@ -161,12 +161,12 @@
             <p>eSAMz prioritizes user privacy through a "Privacy First" architecture. We process your messages in real-time to generate responses and strictly limit data retention.</p>
             <p>We do not create permanent user accounts or profiles for general usage. You interact with eSAMz largely anonymously via session identifiers.</p>
 
-            <h2>2. Session Memory & Cookies</h2>
-            <p><strong>Session Persistence:</strong> To provide a seamless conversation experience, eSAMz uses a browser Cookie (named <code>esamz_sid</code>).</p>
+            <h2>2. Session Memory & No Cookies</h2>
+            <p><strong>Zero-Cookie Architecture:</strong> eSAMz v10.1 no longer uses browser cookies for session tracking.</p>
             <ul>
-                <li><strong>Duration:</strong> This cookie is set to expire after <strong>30 days</strong>. This allows you to return to the site without immediately losing your conversation history.</li>
-                <li><strong>Content:</strong> The cookie itself contains only a random session ID. The actual conversation history associated with this ID is stored temporarily in our active memory to facilitate the chat.</li>
-                <li><strong>Control:</strong> You can delete this cookie at any time via your browser settings. Doing so will reset your session.</li>
+                <li><strong>Short-Term Retention:</strong> Your conversation context is held in our secure active memory (Redis) for only <strong>30 minutes</strong> from your last interaction.</li>
+                <li><strong>Automatic Deletion:</strong> If you are inactive for more than 30 minutes, the server automatically wipes the conversation memory immediately.</li>
+                <li><strong>Session ID:</strong> A random session identifier is stored temporarily in your browser's local storage (not a cookie) to maintain the chat connection while you are active.</li>
             </ul>
 
             <h2>3. Data We Do Not Collect</h2>
@@ -199,7 +199,7 @@
             <h2>7. GDPR & CCPA Compliance</h2>
             <p>eSAMz respects your rights under GDPR (Europe) and CCPA (California).</p>
             <ul>
-                <li><strong>Right to erasure:</strong> You can effectively erase your data by clearing your browser cookies and local storage.</li>
+                <li><strong>Right to erasure:</strong> You can effectively erase your data by clearing your browser's local storage or simply waiting 30 minutes for server deletion.</li>
                 <li><strong>No Sale of Data:</strong> We do not sell your personal information or conversation data.</li>
             </ul>
 
