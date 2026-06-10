@@ -1,6 +1,6 @@
 # Privacy Policy - eSAMz AI
 
-**Last Updated: June 9, 2026**
+**Last Updated: June 10, 2026**
 
 This Privacy Policy describes how eSAMz AI ("we," "us," or "our") collects, uses, processes, and protects your personal data when you use our AI assistant services (the "Service"). We are committed to safeguarding your privacy and ensuring compliance with applicable data protection laws, including the Digital Personal Data Protection Act (DPDP), 2023, of India, and principles aligned with the General Data Protection Regulation (GDPR).
 
@@ -14,103 +14,90 @@ By accessing or using the eSAMz AI Service, you acknowledge that you have read, 
 *   The mechanism for exercising these rights and for grievance redressal.
 *   Contact information for our Data Protection Officer or designated contact person.
 
-Your consent will be specific to each purpose and will not be implied by your continued use of the Service. You have the right to withdraw your consent at any time, as detailed in Section 8.
+Your consent is specific to each purpose. You have the right to withdraw your consent at any time, which will result in the permanent deletion of your account and all associated data as detailed in Section 8.
 
 ## 2. Data We Collect and Process
 
-We minimize data collection to what is strictly necessary to provide and improve our Service. The types of personal data we collect and process depend on how you interact with eSAMz AI.
+We minimize data collection to what is strictly necessary to provide and improve our Service.
 
 ### 2.1. Data Collected from All Users (Anonymous and Signed-in)
 
-*   **Session Prompts:** Your input prompts during a chat session are processed in real-time to generate responses. These are subject to a strict 30-minute retention policy on our servers, after which they are automatically wiped. We do not store these prompts beyond this period for anonymous users. If `PRIVACY_MODE` is enabled on our servers, no session history is stored at all.
-*   **Minimal System Logs:** We maintain minimal technical logs strictly for security, debugging, and abuse prevention. These logs may include request timestamps, response codes, and anonymized usage data. Access logs are retained for short periods (typically 48 hours) and then deleted.
-*   **Local Browser Storage:** Your chat history and certain user preferences are stored locally on your device using `localStorage`. This data is not transmitted to or accessed by our servers. You can clear this data by clearing your browser's local storage or cookies.
-*   **User Agent Information:** We collect information about your browser and operating system for compatibility, security, and analytics purposes.
-*   **IP Address:** Your IP address is collected for security, abuse prevention, and for legal compliance, particularly when recording your consent to our Privacy Policy and Terms of Service.
+*   **Session Prompts:** Your input prompts are processed in real-time to generate responses. For anonymous users, these are subject to a strict 30-minute retention policy on our servers, after which they are automatically wiped. If `PRIVACY_MODE` is enabled on our servers, no session history is stored at all [1].
+*   **Local Browser Storage:** Your chat history, session IDs, and user preferences are stored locally on your device using `localStorage` (keys: `esamz_conversations_v9`, `esamz_last_chat_id`). We also utilize `sessionStorage`, `IndexedDB`, and the `Cache API` for application state, service worker functionality, and authentication persistence [2]. This data is not transmitted to our servers unless you are signed in.
+*   **Technical Identifiers:** We collect your browser's user agent and IP address for security, abuse prevention, and to record your consent to our Privacy Policy and Terms of Service [3].
 
 ### 2.2. Data Collected from Signed-in Users
 
-When you create or sign in to an account using Clerk authentication, we collect and process additional data:
+When you sign in using Clerk authentication, we collect and process additional data:
 
-*   **Email Address:** Used for authentication, account management, security purposes, and to identify your subscription tier.
-*   **Clerk User ID (`clerkId`):** A unique identifier provided by our authentication provider (Clerk) to manage your account.
-*   **Privacy Policy Acceptance Records:** When you explicitly accept our Privacy Policy, we record:
-    *   `privacyPolicyAccepted`: A boolean indicating acceptance.
-    *   `privacyPolicyAcceptedAt`: Timestamp of your acceptance.
-    *   `policyUrl`: The URL of the policy you accepted.
-    *   `userAgent`: Information about your browser and operating system.
-    *   `IP Address`: Your IP address at the time of acceptance. This is collected for legal compliance and audit purposes to demonstrate valid consent.
-*   **Payment Information (Reference IDs):** We do not store full credit card or payment details. Payments are processed by third-party providers (Cashfree). We store a `payment reference ID`, your `tier` (e.g., Free, Plus, Pro, Max), and `lastPaymentId` to verify subscription status and manage access to premium features.
-*   **Custom System Prompts:** For users with specific subscription tiers (e.g., Max tier), custom system prompts may be collected if you choose to provide them. These are treated as part of your session data and are subject to the same retention policies.
-*   **User-Provided Name:** If you provide your name within a chat message (e.g., 
-"My name is [Name]"), our system may extract and store this name temporarily within your session for personalization. This name is not permanently linked to your account beyond the active session.
+*   **Account Information:** Your email address and unique Clerk User ID (`clerkId`) [4].
+*   **Privacy Policy Acceptance Records:** We record your explicit acceptance in our MongoDB database, including the timestamp (`privacyPolicyAcceptedAt`), policy URL, user agent, and IP address [5].
+*   **Chat History Synchronization:** For signed-in users, chat history may be synchronized with our backend to provide a consistent experience across devices [6].
+*   **Custom System Prompts:** If you use the "System Prompt Editor" to provide custom instructions, these are processed as part of your session data [7].
+*   **User-Provided Name:** Our system may extract your name from messages (e.g., "My name is [Name]") to personalize responses within the active session [8].
 
 ## 3. How We Use Your Data
 
-We utilize the collected data for several essential purposes, all aimed at providing and enhancing your experience with eSAMz AI. Primarily, data is used to **provide and maintain the Service**, which includes generating AI responses, managing your chat sessions, and ensuring the overall functionality of the eSAMz AI platform. For signed-in users, data is crucial for **authentication and account management**, allowing us to verify your identity, manage your account, and grant access to features corresponding to your subscription tier. We also employ data for **security and abuse prevention**, actively detecting and preventing fraudulent activities, unauthorized access, and other security incidents to protect both our users and our infrastructure. Furthermore, data collection supports **legal compliance**, enabling us to meet our obligations, such as demonstrating valid consent under data protection laws. We continuously strive for **service improvement** by analyzing anonymized usage data to understand patterns, debug issues, and enhance the performance and features of our Service. Lastly, data assists in **customer support**, allowing us to respond effectively to your inquiries and provide necessary technical assistance.
+We utilize the collected data for the following purposes:
+*   **Providing the Service:** Generating AI responses using the Google Gemma API and Wikipedia RAG [9].
+*   **Authentication and Account Management:** Verifying your identity and managing your account via Clerk [4].
+*   **Security and Abuse Prevention:** Detecting and preventing fraudulent activities and unauthorized access [3].
+*   **Legal Compliance:** Meeting obligations such as demonstrating valid consent under data protection laws [10].
+*   **Service Improvement:** Analyzing anonymized usage data to enhance performance [11].
 
 ## 4. Data Retention
 
-Our data retention policies are designed to be transparent and minimize storage duration:
-
-*   **Session Data:** Your chat session inputs are retained on our servers for a maximum of 30 minutes of inactivity. After this period, they are automatically deleted. If `PRIVACY_MODE` is active, no session history is stored on our servers at all.
-*   **Local Browser Storage:** Data stored in your browser's `localStorage` persists until you manually clear it from your browser settings.
-*   **Account-Related Data:** This includes your email address, Clerk User ID, privacy policy acceptance records (including IP address and user agent), and payment reference IDs. This data is retained for as long as your account remains active or as legally required for audit purposes. You have the right to request the erasure of this data, as detailed in Section 8.
-*   **System Logs:** Minimal technical logs, essential for security and debugging, are retained for short periods, typically 48 hours, before being automatically deleted.
+*   **Session Data:** Anonymous session inputs are deleted after 30 minutes of inactivity [1].
+*   **Local Storage:** Data in `localStorage`, `sessionStorage`, `IndexedDB`, and `Cache API` persists until you manually clear it or revoke your consent [2].
+*   **Account Data:** Retained as long as your account is active. Revoking consent triggers immediate deletion from our MongoDB database (including user records, logs, and conversations) and the Clerk authentication system [5].
+*   **System Logs:** Technical logs are retained for 48 hours for security and debugging [1].
 
 ## 5. Data Sharing and Disclosure
 
-We are committed to not selling your personal data. We may share your data with third parties only under specific, necessary circumstances:
-
-*   **AI Model Providers:** To generate responses, your session prompts are sent in real-time to third-party AI model providers, such as the Google Gemma API. Their respective privacy policies govern the processing of your data by these providers, and we ensure our agreements align with our data protection commitments.
-*   **Authentication Providers:** We use Clerk for user authentication. Your email address and Clerk User ID are processed by Clerk as part of their service, governed by their privacy policy.
-*   **Payment Processors:** For subscription payments, we utilize third-party payment processors like Cashfree. We do not store your full payment details; instead, your payment information is provided directly to these processors, whose privacy policies dictate their data handling. We only retain a payment reference ID and your subscription tier.
-*   **Analytics Providers:** Google Analytics is used to understand website traffic and usage trends. This service collects anonymous usage data and may use its own cookies. You will be presented with a cookie consent banner for non-essential cookies.
-*   **Infrastructure Providers:** Our services are hosted on Vercel, and we use Upstash Redis for caching. These providers may process data as part of their infrastructure services, and their privacy policies govern their data handling practices.
-*   **Legal Requirements:** We may disclose your personal data if legally mandated or in response to valid requests from public authorities, such as a court order or government agency.
-*   **Business Transfers:** In the event of a merger, acquisition, or sale of all or a portion of our assets, your personal data may be transferred to the acquiring entity.
+We do not sell your personal data. We share data with third parties only as necessary:
+*   **AI Model Providers:** Google Gemma API receives your prompts in real-time to generate responses [9].
+*   **Authentication:** Clerk processes your email and User ID for authentication [4].
+*   **Infrastructure:** Vercel (hosting), MongoDB (database), and Upstash Redis (caching) [12].
+*   **Analytics:** Google Analytics and Vercel Web Analytics collect anonymous usage data [11].
+*   **Search/RAG:** Wikipedia and Serper API are used for Retrieval-Augmented Generation [9].
 
 ## 6. Data Security
 
-We implement robust technical and organizational measures to protect your personal data from unauthorized access, disclosure, alteration, or destruction. These measures include encryption, stringent access controls, and regular security assessments. However, it is important to acknowledge that no method of transmission over the internet or electronic storage can guarantee 100% security. While we strive to protect your data, we cannot ensure its absolute security.
+We implement technical and organizational measures, including encryption and access controls, to protect your data. We explicitly disable browser permissions for camera, microphone, geolocation, and payments at the header level to enhance security [13].
 
 ## 7. Children’s Privacy
 
-eSAMz AI is not intended for use by individuals under the age of 18. We do not knowingly collect personal data from anyone under 18. If we become aware that we have inadvertently collected personal data from a child under 18 without verifiable parental consent, we will take immediate steps to delete that information. Our Terms of Service explicitly reflect this age restriction.
+eSAMz AI is not intended for use by individuals under the age of 18. We do not knowingly collect personal data from minors.
 
-## 8. Your Rights as a Data Principal (DPDP Act & GDPR Principles)
+## 8. Your Rights (DPDP Act & GDPR)
 
-As a Data Principal, you are afforded several important rights concerning your personal data, consistent with the DPDP Act and GDPR principles:
+As a Data Principal, you have the following rights:
+*   **Right to Access and Correction:** You can view and update your personal data by managing your account settings or contacting us.
+*   **Right to Erasure (Right to be Forgotten):** You can delete your account and all associated data (including logs in MongoDB and your Clerk record) by using the "Revoke Consent" feature. This process hard-deletes your record from MongoDB, clears your Clerk account, and wipes all local browser storage (localStorage, sessionStorage, IndexedDB, and Cache API) [5].
+*   **Right to Withdraw Consent:** Revoking consent will stop all processing and initiate immediate data deletion [5].
+*   **Right to Data Portability:** You can export your chat history as JSON or Markdown directly from the application menu [2].
 
-*   **Right to Access:** You have the right to obtain confirmation as to whether or not your personal data is being processed, and, where that is the case, access to the personal data and certain information regarding its processing.
-*   **Right to Correction/Rectification:** You have the right to request the correction of inaccurate or incomplete personal data concerning you.
-*   **Right to Erasure (Right to be Forgotten):** You have the right to request the deletion of your personal data under certain conditions, such as when the data is no longer necessary for the purposes for which it was collected.
-*   **Right to Data Portability:** You have the right to receive your personal data in a structured, commonly used, and machine-readable format and to transmit that data to another controller without hindrance.
-*   **Right to Withdraw Consent:** You have the right to withdraw your consent to the processing of your personal data at any time. The withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal.
-*   **Right to Grievance Redressal:** You have the right to register a grievance with our Data Protection Officer or the relevant data protection authority.
+## 9. Changes to This Policy
 
-To exercise any of these rights, please contact us using the details provided in Section 10. We will respond to your request in accordance with applicable data protection laws.
-
-## 9. Changes to This Privacy Policy
-
-We may update this Privacy Policy periodically to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy regularly for any changes. Your continued use of the Service after any modifications signifies your acceptance of the updated Privacy Policy.
+We may update this policy periodically. We will notify you of material changes by posting the new policy and updating the "Last Updated" date.
 
 ## 10. Contact Us
 
-If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
-
-**eSAMz AI Data Protection Officer**
-Email: esamzai365@gmail.com
+For questions or to exercise your rights, contact our Data Protection Officer at:
+**Email: esamzai365@gmail.com**
 
 ---
-
 **References**
-
-[1] Digital Personal Data Protection Act, 2023. (India). Available at: [https://www.meity.gov.in/content/digital-personal-data-protection-act-2023](https://www.meity.gov.in/content/digital-personal-data-protection-act-2023)
-[2] General Data Protection Regulation (GDPR). (EU). Available at: [https://gdpr-info.eu/](https://gdpr-info.eu/)
-[3] Clerk Authentication. Available at: [https://clerk.com/](https://clerk.com/)
-[4] Cashfree Payments. Available at: [https://www.cashfree.com/](https://www.cashfree.com/)
-[5] Google Analytics. Available at: [https://analytics.google.com/](https://analytics.google.com/)
-[6] Vercel. Available at: [https://vercel.com/](https://vercel.com/)
-[7] Upstash Redis. Available at: [https://upstash.com/](https://upstash.com/)
-[8] Google Gemma API. Available at: [https://ai.google.dev/models/gemma](https://ai.google.dev/models/gemma)
+[1] `main(1).rs(1).txt` (Backend Code)
+[2] `esamz.a/app/page.tsx` (Frontend Code)
+[3] `main(1).rs(1).txt` (Backend Code), `esamz.a/app/api/user/privacy-policy-acceptance/route.ts` (Frontend API)
+[4] `esamz.a/app/api/chat/proxy/route.ts` (Frontend API), `esamz.a/app/api/user/tier/route.ts` (Frontend API)
+[5] `esamz.a/app/api/user/privacy-policy-acceptance/revoke/route.ts` (Frontend API)
+[6] `esamz.a/app/api/chat/proxy/route.ts` (Frontend API)
+[7] `main(1).rs(1).txt` (Backend Code)
+[8] `main(1).rs(1).txt` (Backend Code)
+[9] `main(1).rs(1).txt` (Backend Code)
+[10] Digital Personal Data Protection Act, 2023. (India). Available at: [https://www.meity.gov.in/content/digital-personal-data-protection-act-2023](https://www.meity.gov.in/content/digital-personal-data-protection-act-2023)
+[11] `esamz.a/app/layout.tsx` (Frontend Code)
+[12] `main(1).rs(1).txt` (Backend Code)
+[13] `esamz.a/Vercel.json` (Vercel Configuration)
