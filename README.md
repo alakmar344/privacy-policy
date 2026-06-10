@@ -64,7 +64,11 @@ eSAMz AI uses cookies and similar tracking technologies to operate and improve o
 
 You can manage your cookie preferences through your browser settings. Disabling certain cookies may affect the functionality of the Service.
 
+remove/cashfree-payments-section
+We implement technical and organizational measures, including encryption and access controls, to protect your data. We explicitly disable browser permissions for camera, microphone, geolocation, and payments at the header level to enhance security.
+=======
 ## 5. Data Retention
+ main
 
 Our data retention policies are designed to be transparent and minimize storage duration:
 
@@ -166,6 +170,21 @@ If any provision of this Privacy Policy is found to be invalid, illegal, or unen
 ---
 
 **References**
+remove/cashfree-payments-section
+[1] `main(1).rs(1).txt` (Backend Code)
+[2] `esamz.a/app/page.tsx` (Frontend Code)
+[3] `main(1).rs(1).txt` (Backend Code), `esamz.a/app/api/user/privacy-policy-acceptance/route.ts` (Frontend API)
+[4] `esamz.a/app/api/chat/proxy/route.ts` (Frontend API)
+[5] `esamz.a/app/api/user/privacy-policy-acceptance/revoke/route.ts` (Frontend API)
+[6] `esamz.a/app/api/chat/proxy/route.ts` (Frontend API)
+[7] `main(1).rs(1).txt` (Backend Code)
+[8] `main(1).rs(1).txt` (Backend Code)
+[9] `main(1).rs(1).txt` (Backend Code)
+[10] Digital Personal Data Protection Act, 2023. (India). Available at: [https://www.meity.gov.in/content/digital-personal-data-protection-act-2023](https://www.meity.gov.in/content/digital-personal-data-protection-act-2023)
+[11] `esamz.a/app/layout.tsx` (Frontend Code)
+[12] `main(1).rs(1).txt` (Backend Code)
+[13] `esamz.a/Vercel.json` (Vercel Configuration)
+=======
 
 1. Digital Personal Data Protection Act, 2023 (India). Available at: https://www.meity.gov.in/content/digital-personal-data-protection-act-2023
 2. General Data Protection Regulation (GDPR) (EU). Available at: https://gdpr-info.eu/
@@ -177,4 +196,4 @@ If any provision of this Privacy Policy is found to be invalid, illegal, or unen
 8. Google Gemma API. Available at: https://ai.google.dev/models/gemma
 9. MongoDB. Available at: https://www.mongodb.com/
 10. Serper API. Available at: https://serper.dev/
-11. Wikipedia. Available at: https://www.wikipedia.org/
+11. Wikipedia. Available at: https://www.wikipedia.org main
