@@ -189,7 +189,7 @@
 <body>
 <div class="legal-container">
     <h1>Privacy Policy - eSAMz AI</h1>
-<p><strong>Last Updated: June 9, 2026</strong></p>
+<p><strong>Last Updated: June 10, 2026</strong></p>
 <p>This Privacy Policy describes how eSAMz AI ("we," "us," or "our") collects, uses, processes, and protects your personal data when you use our AI assistant services (the "Service"). We are committed to safeguarding your privacy and ensuring compliance with applicable data protection laws, including the Digital Personal Data Protection Act (DPDP), 2023, of India, and principles aligned with the General Data Protection Regulation (GDPR).</p>
 <h2>1. Your Consent</h2>
 <p>By accessing or using the eSAMz AI Service, you acknowledge that you have read, understood, and agree to the terms of this Privacy Policy. For the processing of your personal data, we obtain your explicit, informed consent through clear affirmative action. Before processing any personal data, you will be presented with a standalone notice detailing:</p>
@@ -214,7 +214,7 @@
 <h3>2.2. Data Collected from Signed-in Users</h3>
 <p>When you create or sign in to an account using Clerk authentication, we collect and process additional data:</p>
 <ul>
-<li><strong>Email Address:</strong> Used for authentication, account management, security purposes, and to identify your subscription tier.</li>
+<li><strong>Email Address:</strong> Used for authentication, account management, and security purposes.</li>
 <li><strong>Clerk User ID (<code>clerkId</code>):</strong> A unique identifier provided by our authentication provider (Clerk) to manage your account.</li>
 <li><strong>Privacy Policy Acceptance Records:</strong> When you explicitly accept our Privacy Policy, we record:<ul>
 <li><code>privacyPolicyAccepted</code>: A boolean indicating acceptance.</li>
@@ -224,19 +224,18 @@
 <li><code>IP Address</code>: Your IP address at the time of acceptance. This is collected for legal compliance and audit purposes to demonstrate valid consent.</li>
 </ul>
 </li>
-<li><strong>Payment Information (Reference IDs):</strong> We do not store full credit card or payment details. Payments are processed by third-party providers (Cashfree). We store a <code>payment reference ID</code>, your <code>tier</code> (e.g., Free, Plus, Pro, Max), and <code>lastPaymentId</code> to verify subscription status and manage access to premium features.</li>
-<li><strong>Custom System Prompts:</strong> For users with specific subscription tiers (e.g., Max tier), custom system prompts may be collected if you choose to provide them. These are treated as part of your session data and are subject to the same retention policies.</li>
+<li><strong>Custom System Prompts:</strong> If you choose to provide custom instructions through the "System Prompt Editor," these are treated as part of your session data and are subject to the same retention policies.</li>
 <li><strong>User-Provided Name:</strong> If you provide your name within a chat message (e.g., 
 "My name is [Name]"), our system may extract and store this name temporarily within your session for personalization. This name is not permanently linked to your account beyond the active session.</li>
 </ul>
 <h2>3. How We Use Your Data</h2>
-<p>We utilize the collected data for several essential purposes, all aimed at providing and enhancing your experience with eSAMz AI. Primarily, data is used to <strong>provide and maintain the Service</strong>, which includes generating AI responses, managing your chat sessions, and ensuring the overall functionality of the eSAMz AI platform. For signed-in users, data is crucial for <strong>authentication and account management</strong>, allowing us to verify your identity, manage your account, and grant access to features corresponding to your subscription tier. We also employ data for <strong>security and abuse prevention</strong>, actively detecting and preventing fraudulent activities, unauthorized access, and other security incidents to protect both our users and our infrastructure. Furthermore, data collection supports <strong>legal compliance</strong>, enabling us to meet our obligations, such as demonstrating valid consent under data protection laws. We continuously strive for <strong>service improvement</strong> by analyzing anonymized usage data to understand patterns, debug issues, and enhance the performance and features of our Service. Lastly, data assists in <strong>customer support</strong>, allowing us to respond effectively to your inquiries and provide necessary technical assistance.</p>
+<p>We utilize the collected data for several essential purposes, all aimed at providing and enhancing your experience with eSAMz AI. Primarily, data is used to <strong>provide and maintain the Service</strong>, which includes generating AI responses, managing your chat sessions, and ensuring the overall functionality of the eSAMz AI platform. For signed-in users, data is crucial for <strong>authentication and account management</strong>, allowing us to verify your identity and manage your account. We also employ data for <strong>security and abuse prevention</strong>, actively detecting and preventing fraudulent activities, unauthorized access, and other security incidents to protect both our users and our infrastructure. Furthermore, data collection supports <strong>legal compliance</strong>, enabling us to meet our obligations, such as demonstrating valid consent under data protection laws. We continuously strive for <strong>service improvement</strong> by analyzing anonymized usage data to understand patterns, debug issues, and enhance the performance and features of our Service. Lastly, data assists in <strong>customer support</strong>, allowing us to respond effectively to your inquiries and provide necessary technical assistance.</p>
 <h2>4. Data Retention</h2>
 <p>Our data retention policies are designed to be transparent and minimize storage duration:</p>
 <ul>
 <li><strong>Session Data:</strong> Your chat session inputs are retained on our servers for a maximum of 30 minutes of inactivity. After this period, they are automatically deleted. If <code>PRIVACY_MODE</code> is active, no session history is stored on our servers at all.</li>
 <li><strong>Local Browser Storage:</strong> Data stored in your browser's <code>localStorage</code> persists until you manually clear it from your browser settings.</li>
-<li><strong>Account-Related Data:</strong> This includes your email address, Clerk User ID, privacy policy acceptance records (including IP address and user agent), and payment reference IDs. This data is retained for as long as your account remains active or as legally required for audit purposes. You have the right to request the erasure of this data, as detailed in Section 8.</li>
+<li><strong>Account-Related Data:</strong> This includes your email address, Clerk User ID, and privacy policy acceptance records (including IP address and user agent). This data is retained for as long as your account remains active or as legally required for audit purposes. You have the right to request the erasure of this data, as detailed in Section 8.</li>
 <li><strong>System Logs:</strong> Minimal technical logs, essential for security and debugging, are retained for short periods, typically 48 hours, before being automatically deleted.</li>
 </ul>
 <h2>5. Data Sharing and Disclosure</h2>
@@ -244,7 +243,6 @@
 <ul>
 <li><strong>AI Model Providers:</strong> To generate responses, your session prompts are sent in real-time to third-party AI model providers, such as the Google Gemma API. Their respective privacy policies govern the processing of your data by these providers, and we ensure our agreements align with our data protection commitments.</li>
 <li><strong>Authentication Providers:</strong> We use Clerk for user authentication. Your email address and Clerk User ID are processed by Clerk as part of their service, governed by their privacy policy.</li>
-<li><strong>Payment Processors:</strong> For subscription payments, we utilize third-party payment processors like Cashfree. We do not store your full payment details; instead, your payment information is provided directly to these processors, whose privacy policies dictate their data handling. We only retain a payment reference ID and your subscription tier.</li>
 <li><strong>Analytics Providers:</strong> Google Analytics is used to understand website traffic and usage trends. This service collects anonymous usage data and may use its own cookies. You will be presented with a cookie consent banner for non-essential cookies.</li>
 <li><strong>Infrastructure Providers:</strong> Our services are hosted on Vercel, and we use Upstash Redis for caching. These providers may process data as part of their infrastructure services, and their privacy policies govern their data handling practices.</li>
 <li><strong>Legal Requirements:</strong> We may disclose your personal data if legally mandated or in response to valid requests from public authorities, such as a court order or government agency.</li>
@@ -276,11 +274,10 @@ Email: esamzai365@gmail.com</p>
 <p>[1] Digital Personal Data Protection Act, 2023. (India). Available at: <a href="https://www.meity.gov.in/content/digital-personal-data-protection-act-2023">https://www.meity.gov.in/content/digital-personal-data-protection-act-2023</a>
 [2] General Data Protection Regulation (GDPR). (EU). Available at: <a href="https://gdpr-info.eu/">https://gdpr-info.eu/</a>
 [3] Clerk Authentication. Available at: <a href="https://clerk.com/">https://clerk.com/</a>
-[4] Cashfree Payments. Available at: <a href="https://www.cashfree.com/">https://www.cashfree.com/</a>
-[5] Google Analytics. Available at: <a href="https://analytics.google.com/">https://analytics.google.com/</a>
-[6] Vercel. Available at: <a href="https://vercel.com/">https://vercel.com/</a>
-[7] Upstash Redis. Available at: <a href="https://upstash.com/">https://upstash.com/</a>
-[8] Google Gemma API. Available at: <a href="https://ai.google.dev/models/gemma">https://ai.google.dev/models/gemma</a></p>
+[4] Google Analytics. Available at: <a href="https://analytics.google.com/">https://analytics.google.com/</a>
+[5] Vercel. Available at: <a href="https://vercel.com/">https://vercel.com/</a>
+[6] Upstash Redis. Available at: <a href="https://upstash.com/">https://upstash.com/</a>
+[7] Google Gemma API. Available at: <a href="https://ai.google.dev/models/gemma">https://ai.google.dev/models/gemma</a></p>
 </div>
 </body>
 </html>
