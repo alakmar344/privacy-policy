@@ -31,7 +31,7 @@ We minimize data collection to what is strictly necessary to provide and improve
 
 When you create or sign in to an account using Clerk authentication, we collect and process additional data:
 
-- **Account Information:** Your email address and unique Clerk User ID (`clerkId`) are used for authentication, account management, security purposes, and to identify your subscription tier.
+- **Account Information:** Your email address and unique Clerk User ID (`clerkId`) are used for authentication, account management, and security purposes.
 - **Privacy Policy Acceptance Records:** When you explicitly accept our Privacy Policy, we record your acceptance in our MongoDB database, including:
   - `privacyPolicyAccepted`: A boolean indicating acceptance.
   - `privacyPolicyAcceptedAt`: Timestamp of your acceptance.
@@ -39,8 +39,7 @@ When you create or sign in to an account using Clerk authentication, we collect 
   - `userAgent`: Information about your browser and operating system.
   - `IP Address`: Your IP address at the time of acceptance, collected for legal compliance and audit purposes to demonstrate valid consent.
 - **Chat History Synchronization:** For signed-in users, chat history may be synchronized with our backend to provide a consistent experience across devices.
-- **Payment Information (Reference IDs):** We do not store full credit card or payment details. Payments are processed by third-party providers (Cashfree). We store a `payment reference ID`, your `tier` (e.g., Free, Plus, Pro, Max), and `lastPaymentId` to verify subscription status and manage access to premium features.
-- **Custom System Prompts:** For users with specific subscription tiers (e.g., Max tier), custom system prompts may be collected if you choose to provide them through the "System Prompt Editor." These are treated as part of your session data and are subject to the same retention policies.
+- **Custom System Prompts:** If you choose to provide custom instructions through the "System Prompt Editor," these are treated as part of your session data and are subject to the same retention policies.
 - **User-Provided Name:** If you provide your name within a chat message (e.g., "My name is [Name]"), our system may extract and store this name temporarily within your session for personalization. This name is not permanently linked to your account beyond the active session.
 
 ## 3. How We Use Your Data
@@ -48,7 +47,7 @@ When you create or sign in to an account using Clerk authentication, we collect 
 We utilize the collected data for the following essential purposes:
 
 - **Providing and Maintaining the Service:** Generating AI responses using the Google Gemma API and Wikipedia RAG via Serper API, managing your chat sessions, and ensuring the overall functionality of the eSAMz AI platform.
-- **Authentication and Account Management:** Verifying your identity and managing your account via Clerk, including granting access to features corresponding to your subscription tier.
+- **Authentication and Account Management:** Verifying your identity and managing your account via Clerk.
 - **Security and Abuse Prevention:** Detecting and preventing fraudulent activities, unauthorized access, and other security incidents to protect both our users and our infrastructure.
 - **Legal Compliance:** Meeting obligations such as demonstrating valid consent under data protection laws, including the DPDP Act, 2023, and GDPR principles.
 - **Service Improvement:** Analyzing anonymized usage data to understand patterns, debug issues, and enhance the performance and features of our Service.
@@ -64,17 +63,13 @@ eSAMz AI uses cookies and similar tracking technologies to operate and improve o
 
 You can manage your cookie preferences through your browser settings. Disabling certain cookies may affect the functionality of the Service.
 
-remove/cashfree-payments-section
-We implement technical and organizational measures, including encryption and access controls, to protect your data. We explicitly disable browser permissions for camera, microphone, geolocation, and payments at the header level to enhance security.
-=======
 ## 5. Data Retention
- main
 
 Our data retention policies are designed to be transparent and minimize storage duration:
 
 - **Session Data:** Your chat session inputs are retained on our servers for a maximum of 30 minutes of inactivity. After this period, they are automatically deleted. If `PRIVACY_MODE` is active, no session history is stored on our servers at all.
 - **Local Browser Storage:** Data stored in `localStorage`, `sessionStorage`, `IndexedDB`, and the `Cache API` persists until you manually clear it from your browser settings or revoke your consent.
-- **Account-Related Data:** This includes your email address, Clerk User ID, privacy policy acceptance records (including IP address and user agent), payment reference IDs, and synchronized chat history. This data is retained for as long as your account remains active or as legally required for audit purposes. Revoking consent triggers immediate deletion from our MongoDB database (including user records, logs, and conversations) and the Clerk authentication system.
+- **Account-Related Data:** This includes your email address, Clerk User ID, privacy policy acceptance records (including IP address and user agent), and synchronized chat history. This data is retained for as long as your account remains active or as legally required for audit purposes. Revoking consent triggers immediate deletion from our MongoDB database (including user records, logs, and conversations) and the Clerk authentication system.
 - **System Logs:** Minimal technical logs, essential for security and debugging, are retained for short periods, typically 48 hours, before being automatically deleted.
 
 ## 6. Data Sharing and Disclosure
@@ -83,7 +78,6 @@ We are committed to not selling your personal data. We may share your data with 
 
 - **AI Model Providers:** Google Gemma API receives your prompts in real-time to generate responses.
 - **Authentication Providers:** Clerk processes your email and User ID for authentication.
-- **Payment Processors:** Cashfree processes subscription payments. We only retain a payment reference ID and your subscription tier.
 - **Infrastructure Providers:** Vercel (hosting), MongoDB (database), and Upstash Redis (caching).
 - **Analytics Providers:** Google Analytics and Vercel Web Analytics collect anonymous usage data.
 - **Search/RAG Providers:** Wikipedia and Serper API are used for Retrieval-Augmented Generation.
@@ -92,7 +86,7 @@ We are committed to not selling your personal data. We may share your data with 
 
 ## 7. Data Transfers
 
-Your data may be transferred to and processed in countries other than your country of residence. By using the Service, you acknowledge that your personal data may be transferred to servers operated by our third-party providers (including Google, Clerk, Vercel, MongoDB, Upstash, Cashfree, and Serper), which may be located in various jurisdictions worldwide. We take appropriate safeguards including:
+Your data may be transferred to and processed in countries other than your country of residence. By using the Service, you acknowledge that your personal data may be transferred to servers operated by our third-party providers (including Google, Clerk, Vercel, MongoDB, Upstash, and Serper), which may be located in various jurisdictions worldwide. We take appropriate safeguards including:
 
 - Ensuring our third-party providers comply with applicable data protection laws, including GDPR standard contractual clauses where applicable.
 - Applying encryption in transit (TLS/SSL) for all data exchanges.
@@ -170,30 +164,14 @@ If any provision of this Privacy Policy is found to be invalid, illegal, or unen
 ---
 
 **References**
-remove/cashfree-payments-section
-[1] `main(1).rs(1).txt` (Backend Code)
-[2] `esamz.a/app/page.tsx` (Frontend Code)
-[3] `main(1).rs(1).txt` (Backend Code), `esamz.a/app/api/user/privacy-policy-acceptance/route.ts` (Frontend API)
-[4] `esamz.a/app/api/chat/proxy/route.ts` (Frontend API)
-[5] `esamz.a/app/api/user/privacy-policy-acceptance/revoke/route.ts` (Frontend API)
-[6] `esamz.a/app/api/chat/proxy/route.ts` (Frontend API)
-[7] `main(1).rs(1).txt` (Backend Code)
-[8] `main(1).rs(1).txt` (Backend Code)
-[9] `main(1).rs(1).txt` (Backend Code)
-[10] Digital Personal Data Protection Act, 2023. (India). Available at: [https://www.meity.gov.in/content/digital-personal-data-protection-act-2023](https://www.meity.gov.in/content/digital-personal-data-protection-act-2023)
-[11] `esamz.a/app/layout.tsx` (Frontend Code)
-[12] `main(1).rs(1).txt` (Backend Code)
-[13] `esamz.a/Vercel.json` (Vercel Configuration)
-=======
 
 1. Digital Personal Data Protection Act, 2023 (India). Available at: https://www.meity.gov.in/content/digital-personal-data-protection-act-2023
 2. General Data Protection Regulation (GDPR) (EU). Available at: https://gdpr-info.eu/
 3. Clerk Authentication. Available at: https://clerk.com/
-4. Cashfree Payments. Available at: https://www.cashfree.com/
-5. Google Analytics. Available at: https://analytics.google.com/
-6. Vercel. Available at: https://vercel.com/
-7. Upstash Redis. Available at: https://upstash.com/
-8. Google Gemma API. Available at: https://ai.google.dev/models/gemma
-9. MongoDB. Available at: https://www.mongodb.com/
-10. Serper API. Available at: https://serper.dev/
-11. Wikipedia. Available at: https://www.wikipedia.org main
+4. Google Analytics. Available at: https://analytics.google.com/
+5. Vercel. Available at: https://vercel.com/
+6. Upstash Redis. Available at: https://upstash.com/
+7. Google Gemma API. Available at: https://ai.google.dev/models/gemma
+8. MongoDB. Available at: https://www.mongodb.com/
+9. Serper API. Available at: https://serper.dev/
+10. Wikipedia. Available at: https://www.wikipedia.org
