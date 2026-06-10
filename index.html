@@ -12,15 +12,14 @@
         }
 
         body {
-            background-color: #000000;   /* pure black background */
-            color: #e8eef2;             /* professional white-grey text */
+            background-color: #000000;
+            color: #e8eef2;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             line-height: 1.55;
             font-weight: 400;
             padding: 2rem 1rem;
         }
 
-        /* main legal document container */
         .legal-container {
             max-width: 1100px;
             margin: 0 auto;
@@ -31,7 +30,6 @@
             transition: all 0.2s ease;
         }
 
-        /* subtle refinement for readability on black bg */
         h1, h2, h3, h4 {
             color: #ffffff;
             font-weight: 500;
@@ -105,7 +103,6 @@
             color: #ffffff;
         }
 
-        /* nested lists and spacing */
         ul ul, ol ul {
             margin-top: 0.3rem;
             margin-bottom: 0.3rem;
@@ -118,7 +115,6 @@
             background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.2), rgba(255,255,255,0.08));
         }
 
-        /* inline code / references styling */
         code {
             background: #1a1c22;
             padding: 0.2rem 0.4rem;
@@ -128,7 +124,6 @@
             color: #ddd;
         }
 
-        /* date + subtle highlight */
         .last-updated {
             font-size: 0.9rem;
             color: #a8b3c2;
@@ -156,7 +151,6 @@
             margin-bottom: 0.35rem;
         }
 
-        /* responsive touches */
         @media (max-width: 700px) {
             body {
                 padding: 1rem;
@@ -175,7 +169,6 @@
             }
         }
 
-        /* footer / fine print consistency */
         .fine-print {
             font-size: 0.8rem;
             color: #8a93a2;
@@ -185,10 +178,12 @@
             text-align: center;
         }
     </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
 <div class="legal-container">
     <h1>Privacy Policy - eSAMz AI</h1>
+ remove/cashfree-payments-section
 <p><strong>Last Updated: June 10, 2026</strong></p>
 <p>This Privacy Policy describes how eSAMz AI ("we," "us," or "our") collects, uses, processes, and protects your personal data when you use our AI assistant services (the "Service"). We are committed to safeguarding your privacy and ensuring compliance with applicable data protection laws, including the Digital Personal Data Protection Act (DPDP), 2023, of India, and principles aligned with the General Data Protection Regulation (GDPR).</p>
 <h2>1. Your Consent</h2>
@@ -278,6 +273,180 @@ Email: esamzai365@gmail.com</p>
 [5] Vercel. Available at: <a href="https://vercel.com/">https://vercel.com/</a>
 [6] Upstash Redis. Available at: <a href="https://upstash.com/">https://upstash.com/</a>
 [7] Google Gemma API. Available at: <a href="https://ai.google.dev/models/gemma">https://ai.google.dev/models/gemma</a></p>
+=======
+    <p class="last-updated"><strong>Last Updated: June 10, 2026</strong></p>
+    <p>This Privacy Policy describes how eSAMz AI ("we," "us," or "our") collects, uses, processes, and protects your personal data when you use our AI assistant services (the "Service"). We are committed to safeguarding your privacy and ensuring compliance with applicable data protection laws, including the Digital Personal Data Protection Act (DPDP), 2023, of India, and principles aligned with the General Data Protection Regulation (GDPR). This policy applies to all users of eSAMz AI, including both anonymous visitors and registered users.</p>
+
+    <h2>1. Your Consent</h2>
+    <p>By accessing or using the eSAMz AI Service, you acknowledge that you have read, understood, and agree to the terms of this Privacy Policy. For the processing of your personal data, we obtain your explicit, informed consent through clear affirmative action. Before processing any personal data, you will be presented with a standalone notice detailing:</p>
+    <ul>
+        <li>The categories of personal data being processed.</li>
+        <li>The specific purposes for which your personal data is processed.</li>
+        <li>Your rights as a Data Principal under the DPDP Act and other applicable laws.</li>
+        <li>The mechanism for exercising these rights and for grievance redressal.</li>
+        <li>Contact information for our Data Protection Officer or designated contact person.</li>
+    </ul>
+    <p>Your consent is specific to each purpose and will not be implied by your continued use of the Service. You have the right to withdraw your consent at any time, which will result in the permanent deletion of your account and all associated data as detailed in Section 9.</p>
+
+    <h2>2. Data We Collect and Process</h2>
+    <p>We minimize data collection to what is strictly necessary to provide and improve our Service. The types of personal data we collect and process depend on how you interact with eSAMz AI.</p>
+
+    <h3>2.1. Data Collected from All Users (Anonymous and Signed-in)</h3>
+    <ul>
+        <li><strong>Session Prompts:</strong> Your input prompts during a chat session are processed in real-time to generate responses. For anonymous users, these are subject to a strict 30-minute retention policy on our servers, after which they are automatically wiped. If <code>PRIVACY_MODE</code> is enabled on our servers, no session history is stored at all.</li>
+        <li><strong>Minimal System Logs:</strong> We maintain minimal technical logs strictly for security, debugging, and abuse prevention. These logs may include request timestamps, response codes, and anonymized usage data. Access logs are retained for short periods (typically 48 hours) and then automatically deleted.</li>
+        <li><strong>Local Browser Storage:</strong> Your chat history, session IDs, and user preferences are stored locally on your device using <code>localStorage</code> (keys: <code>esamz_conversations_v9</code>, <code>esamz_last_chat_id</code>). We also utilize <code>sessionStorage</code>, <code>IndexedDB</code>, and the <code>Cache API</code> for application state, service worker functionality, and authentication persistence. This data is not transmitted to our servers unless you are signed in. You can clear this data by clearing your browser's local storage, cookies, or by using the in-app data export and deletion features.</li>
+        <li><strong>Technical Identifiers:</strong> We collect your browser's user agent and IP address for security, abuse prevention, compatibility, analytics, and to record your consent to our Privacy Policy and Terms of Service.</li>
+    </ul>
+
+    <h3>2.2. Data Collected from Signed-in Users</h3>
+    <p>When you create or sign in to an account using Clerk authentication, we collect and process additional data:</p>
+    <ul>
+        <li><strong>Account Information:</strong> Your email address and unique Clerk User ID (<code>clerkId</code>) are used for authentication, account management, security purposes, and to identify your subscription tier.</li>
+        <li><strong>Privacy Policy Acceptance Records:</strong> When you explicitly accept our Privacy Policy, we record your acceptance in our MongoDB database, including:
+            <ul>
+                <li><code>privacyPolicyAccepted</code>: A boolean indicating acceptance.</li>
+                <li><code>privacyPolicyAcceptedAt</code>: Timestamp of your acceptance.</li>
+                <li><code>policyUrl</code>: The URL of the policy you accepted.</li>
+                <li><code>userAgent</code>: Information about your browser and operating system.</li>
+                <li><code>IP Address</code>: Your IP address at the time of acceptance, collected for legal compliance and audit purposes to demonstrate valid consent.</li>
+            </ul>
+        </li>
+        <li><strong>Chat History Synchronization:</strong> For signed-in users, chat history may be synchronized with our backend to provide a consistent experience across devices.</li>
+        <li><strong>Payment Information (Reference IDs):</strong> We do not store full credit card or payment details. Payments are processed by third-party providers (Cashfree). We store a <code>payment reference ID</code>, your <code>tier</code> (e.g., Free, Plus, Pro, Max), and <code>lastPaymentId</code> to verify subscription status and manage access to premium features.</li>
+        <li><strong>Custom System Prompts:</strong> For users with specific subscription tiers (e.g., Max tier), custom system prompts may be collected if you choose to provide them through the "System Prompt Editor." These are treated as part of your session data and are subject to the same retention policies.</li>
+        <li><strong>User-Provided Name:</strong> If you provide your name within a chat message (e.g., "My name is [Name]"), our system may extract and store this name temporarily within your session for personalization. This name is not permanently linked to your account beyond the active session.</li>
+    </ul>
+
+    <h2>3. How We Use Your Data</h2>
+    <p>We utilize the collected data for the following essential purposes, all aimed at providing and enhancing your experience with eSAMz AI:</p>
+    <ul>
+        <li><strong>Providing and Maintaining the Service:</strong> Generating AI responses using the Google Gemma API and Wikipedia RAG via Serper API, managing your chat sessions, and ensuring the overall functionality of the eSAMz AI platform.</li>
+        <li><strong>Authentication and Account Management:</strong> Verifying your identity and managing your account via Clerk, including granting access to features corresponding to your subscription tier.</li>
+        <li><strong>Security and Abuse Prevention:</strong> Detecting and preventing fraudulent activities, unauthorized access, and other security incidents to protect both our users and our infrastructure.</li>
+        <li><strong>Legal Compliance:</strong> Meeting obligations such as demonstrating valid consent under data protection laws, including the DPDP Act, 2023, and GDPR principles.</li>
+        <li><strong>Service Improvement:</strong> Analyzing anonymized usage data to understand patterns, debug issues, and enhance the performance and features of our Service.</li>
+        <li><strong>Customer Support:</strong> Responding effectively to your inquiries and providing necessary technical assistance.</li>
+    </ul>
+
+    <h2>4. Cookies and Tracking Technologies</h2>
+    <p>eSAMz AI uses cookies and similar tracking technologies to operate and improve our Service. Specifically:</p>
+    <ul>
+        <li><strong>Essential Cookies:</strong> Required for the functioning of the Service, including session management, authentication persistence via Clerk, and remembering your privacy policy acceptance. These cannot be disabled as the Service will not function without them.</li>
+        <li><strong>Analytics Cookies:</strong> Google Analytics and Vercel Web Analytics may use cookies to collect anonymous usage data, such as page views and interaction patterns. You will be presented with a cookie consent banner for non-essential cookies, and you may opt out through your browser settings.</li>
+        <li><strong>Local Storage Technologies:</strong> As described in Section 2.1, we use <code>localStorage</code>, <code>sessionStorage</code>, <code>IndexedDB</code>, and the <code>Cache API</code> to store chat history, user preferences, session IDs, and application state locally on your device. These are not cookies but function similarly for data persistence.</li>
+    </ul>
+    <p>You can manage your cookie preferences through your browser settings. Please note that disabling certain cookies may affect the functionality of the Service.</p>
+
+    <h2>5. Data Retention</h2>
+    <p>Our data retention policies are designed to be transparent and minimize storage duration:</p>
+    <ul>
+        <li><strong>Session Data:</strong> Your chat session inputs are retained on our servers for a maximum of 30 minutes of inactivity. After this period, they are automatically deleted. If <code>PRIVACY_MODE</code> is active, no session history is stored on our servers at all.</li>
+        <li><strong>Local Browser Storage:</strong> Data stored in <code>localStorage</code>, <code>sessionStorage</code>, <code>IndexedDB</code>, and the <code>Cache API</code> persists until you manually clear it from your browser settings or revoke your consent.</li>
+        <li><strong>Account-Related Data:</strong> This includes your email address, Clerk User ID, privacy policy acceptance records (including IP address and user agent), payment reference IDs, and synchronized chat history. This data is retained for as long as your account remains active or as legally required for audit purposes. Revoking consent triggers immediate deletion from our MongoDB database (including user records, logs, and conversations) and the Clerk authentication system. You have the right to request the erasure of this data, as detailed in Section 9.</li>
+        <li><strong>System Logs:</strong> Minimal technical logs, essential for security and debugging, are retained for short periods, typically 48 hours, before being automatically deleted.</li>
+    </ul>
+
+    <h2>6. Data Sharing and Disclosure</h2>
+    <p>We are committed to not selling your personal data. We may share your data with third parties only under specific, necessary circumstances:</p>
+    <ul>
+        <li><strong>AI Model Providers:</strong> To generate responses, your session prompts are sent in real-time to third-party AI model providers, such as the Google Gemma API. Their respective privacy policies govern the processing of your data by these providers, and we ensure our agreements align with our data protection commitments.</li>
+        <li><strong>Authentication Providers:</strong> We use Clerk for user authentication. Your email address and Clerk User ID are processed by Clerk as part of their service, governed by their privacy policy.</li>
+        <li><strong>Payment Processors:</strong> For subscription payments, we utilize third-party payment processors like Cashfree. We do not store your full payment details; instead, your payment information is provided directly to these processors, whose privacy policies dictate their data handling. We only retain a payment reference ID and your subscription tier.</li>
+        <li><strong>Infrastructure Providers:</strong> Our services are hosted on Vercel, and we use MongoDB (database) and Upstash Redis (caching). These providers may process data as part of their infrastructure services, and their privacy policies govern their data handling practices.</li>
+        <li><strong>Analytics Providers:</strong> Google Analytics and Vercel Web Analytics are used to understand website traffic and usage trends. These services collect anonymous usage data and may use their own cookies. You will be presented with a cookie consent banner for non-essential cookies.</li>
+        <li><strong>Search/RAG Providers:</strong> Wikipedia and Serper API are used for Retrieval-Augmented Generation to enhance the accuracy and relevance of AI responses.</li>
+        <li><strong>Legal Requirements:</strong> We may disclose your personal data if legally mandated or in response to valid requests from public authorities, such as a court order, government agency, or regulatory body, including requests under the DPDP Act.</li>
+        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, reorganization, or sale of all or a portion of our assets, your personal data may be transferred to the acquiring entity. We will notify you via email and/or a prominent notice on our Service prior to any such transfer.</li>
+    </ul>
+
+    <h2>7. Data Transfers</h2>
+    <p>Your data may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that differ from those of your jurisdiction. By using the Service, you acknowledge that your personal data may be transferred to servers operated by our third-party providers (including Google, Clerk, Vercel, MongoDB, Upstash, Cashfree, and Serper), which may be located in various jurisdictions worldwide. We take appropriate safeguards to ensure your data receives an adequate level of protection, including:</p>
+    <ul>
+        <li>Ensuring our third-party providers comply with applicable data protection laws, including GDPR standard contractual clauses where applicable.</li>
+        <li>Applying encryption in transit (TLS/SSL) for all data exchanges.</li>
+        <li>Conducting due diligence on the data protection practices of our service providers.</li>
+    </ul>
+
+    <h2>8. Data Security</h2>
+    <p>We implement robust technical and organizational measures to protect your personal data from unauthorized access, disclosure, alteration, or destruction. These measures include:</p>
+    <ul>
+        <li><strong>Encryption:</strong> Data in transit is encrypted using TLS/SSL protocols. Sensitive data at rest is encrypted in our databases and storage systems.</li>
+        <li><strong>Access Controls:</strong> Stringent access controls ensure that only authorized personnel can access personal data, and access is granted on a need-to-know basis.</li>
+        <li><strong>Permission Restrictions:</strong> We explicitly disable browser permissions for camera, microphone, geolocation, and payments at the HTTP header level to enhance security.</li>
+        <li><strong>Regular Security Assessments:</strong> We conduct periodic security reviews and vulnerability assessments to identify and mitigate potential risks.</li>
+    </ul>
+    <p>However, it is important to acknowledge that no method of transmission over the internet or electronic storage can guarantee absolute security. While we strive to protect your data using commercially reasonable measures, we cannot ensure its absolute security.</p>
+
+    <h2>9. Data Breach Notification</h2>
+    <p>In the event of a personal data breach that is likely to result in a risk to your rights and freedoms, we will:</p>
+    <ul>
+        <li>Notify the relevant data protection authority within 72 hours of becoming aware of the breach, where required by applicable law (including the GDPR).</li>
+        <li>Notify you directly without undue delay when the breach is likely to result in a high risk to your rights and freedoms, providing clear information about the nature of the breach, the data affected, and the measures we are taking to address it.</li>
+        <li>Take immediate steps to contain and remediate the breach, including conducting a thorough investigation and implementing measures to prevent recurrence.</li>
+    </ul>
+    <p>Notifications will be communicated via email to the address associated with your account or through a prominent notice on our Service.</p>
+
+    <h2>10. Children's Privacy</h2>
+    <p>eSAMz AI is not intended for use by individuals under the age of 18. We do not knowingly collect personal data from anyone under 18. If we become aware that we have inadvertently collected personal data from a child under 18 without verifiable parental consent, we will take immediate steps to delete that information from our servers, databases, and all associated systems. Our Terms of Service explicitly reflect this age restriction.</p>
+
+    <h2>11. Automated Decision-Making and Profiling</h2>
+    <p>We do not engage in automated decision-making or profiling that produces legal or similarly significant effects concerning you. While our AI assistant processes your prompts to generate responses, this processing is limited to providing the Service and does not result in decisions that solely determine legal rights, access to services, or similar outcomes. If we ever introduce such processes, we will update this policy and obtain your explicit consent before implementation.</p>
+
+    <h2>12. Your Rights as a Data Principal (DPDP Act &amp; GDPR Principles)</h2>
+    <p>As a Data Principal, you are afforded several important rights concerning your personal data, consistent with the DPDP Act and GDPR principles:</p>
+    <ul>
+        <li><strong>Right to Access:</strong> You have the right to obtain confirmation as to whether or not your personal data is being processed, and, where that is the case, access to the personal data and certain information regarding its processing.</li>
+        <li><strong>Right to Correction/Rectification:</strong> You have the right to request the correction of inaccurate or incomplete personal data concerning you.</li>
+        <li><strong>Right to Erasure (Right to be Forgotten):</strong> You have the right to request the deletion of your personal data. You can delete your account and all associated data (including logs in MongoDB and your Clerk record) by using the "Revoke Consent" feature. This process hard-deletes your record from MongoDB, clears your Clerk account, and wipes all local browser storage (<code>localStorage</code>, <code>sessionStorage</code>, <code>IndexedDB</code>, and <code>Cache API</code>).</li>
+        <li><strong>Right to Data Portability:</strong> You have the right to receive your personal data in a structured, commonly used, and machine-readable format. You can export your chat history as JSON or Markdown directly from the application menu, and transmit that data to another controller without hindrance.</li>
+        <li><strong>Right to Withdraw Consent:</strong> You have the right to withdraw your consent to the processing of your personal data at any time. Revoking consent will stop all processing and initiate immediate data deletion. The withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal.</li>
+        <li><strong>Right to Grievance Redressal:</strong> You have the right to register a grievance with our Data Protection Officer or the relevant data protection authority.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us using the details provided in Section 14. We will respond to your request in accordance with applicable data protection laws, typically within 30 days.</p>
+
+    <h2>13. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy periodically to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by:</p>
+    <ul>
+        <li>Posting the new Privacy Policy on this page and updating the "Last Updated" date.</li>
+        <li>Sending an email notification to registered users for significant changes.</li>
+        <li>Displaying a prominent notice within the Service requiring your renewed consent where required by law.</li>
+    </ul>
+    <p>We encourage you to review this Privacy Policy regularly for any changes. Your continued use of the Service after any modifications signifies your acceptance of the updated Privacy Policy.</p>
+
+    <h2>14. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, or to exercise any of your rights as a Data Principal, please contact our Data Protection Officer at:</p>
+    <p><strong>eSAMz AI Data Protection Officer</strong><br>
+    Email: <a href="mailto:esamzai365@gmail.com">esamzai365@gmail.com</a></p>
+    <p>We will acknowledge receipt of your request within 7 days and respond substantively within 30 days, in accordance with applicable data protection laws.</p>
+
+    <h2>15. Governing Law and Jurisdiction</h2>
+    <p>This Privacy Policy shall be governed by and construed in accordance with the laws of India. Any disputes arising from or in connection with this Privacy Policy shall be subject to the exclusive jurisdiction of the courts in India. For users located in the European Union, you also have the right to lodge a complaint with your local supervisory authority under the GDPR.</p>
+
+    <h2>16. Severability</h2>
+    <p>If any provision of this Privacy Policy is found to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force and effect. The invalid or unenforceable provision shall be modified to the minimum extent necessary to make it valid and enforceable, while preserving the intent of the original provision.</p>
+
+    <hr />
+
+    <div class="ref-list">
+        <p><strong>References</strong></p>
+        <ol>
+            <li>Digital Personal Data Protection Act, 2023 (India). Available at: <a href="https://www.meity.gov.in/content/digital-personal-data-protection-act-2023" target="_blank" rel="noopener noreferrer">https://www.meity.gov.in/content/digital-personal-data-protection-act-2023</a></li>
+            <li>General Data Protection Regulation (GDPR) (EU). Available at: <a href="https://gdpr-info.eu/" target="_blank" rel="noopener noreferrer">https://gdpr-info.eu/</a></li>
+            <li>Clerk Authentication. Available at: <a href="https://clerk.com/" target="_blank" rel="noopener noreferrer">https://clerk.com/</a></li>
+            <li>Cashfree Payments. Available at: <a href="https://www.cashfree.com/" target="_blank" rel="noopener noreferrer">https://www.cashfree.com/</a></li>
+            <li>Google Analytics. Available at: <a href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer">https://analytics.google.com/</a></li>
+            <li>Vercel. Available at: <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer">https://vercel.com/</a></li>
+            <li>Upstash Redis. Available at: <a href="https://upstash.com/" target="_blank" rel="noopener noreferrer">https://upstash.com/</a></li>
+            <li>Google Gemma API. Available at: <a href="https://ai.google.dev/models/gemma" target="_blank" rel="noopener noreferrer">https://ai.google.dev/models/gemma</a></li>
+            <li>MongoDB. Available at: <a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer">https://www.mongodb.com/</a></li>
+            <li>Serper API. Available at: <a href="https://serper.dev/" target="_blank" rel="noopener noreferrer">https://serper.dev/</a></li>
+            <li>Wikipedia. Available at: <a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">https://www.wikipedia.org/</a></li>
+        </ol>
+    </div>
+
+    <p class="fine-print">&copy; 2026 eSAMz AI. All rights reserved. This Privacy Policy is effective as of the date listed above.</p>
+ main
 </div>
 </body>
 </html>
