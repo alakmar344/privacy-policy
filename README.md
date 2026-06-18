@@ -46,7 +46,7 @@ When you create or sign in to an account using Clerk authentication, we collect 
 
 We utilize the collected data for the following essential purposes:
 
-- **Providing and Maintaining the Service:** Generating AI responses using the Google Gemma API and Wikipedia RAG via Serper API, managing your chat sessions, and ensuring the overall functionality of the eSAMz AI platform.
+- **Providing and Maintaining the Service:** Generating AI responses using the Sarvam 105b API and Wikipedia RAG via Serper API, managing your chat sessions, and ensuring the overall functionality of the eSAMz AI platform.
 - **Authentication and Account Management:** Verifying your identity and managing your account via Clerk.
 - **Security and Abuse Prevention:** Detecting and preventing fraudulent activities, unauthorized access, and other security incidents to protect both our users and our infrastructure.
 - **Legal Compliance:** Meeting obligations such as demonstrating valid consent under data protection laws, including the DPDP Act, 2023, and GDPR principles.
@@ -76,7 +76,7 @@ Our data retention policies are designed to be transparent and minimize storage 
 
 We are committed to not selling your personal data. We may share your data with third parties only under specific, necessary circumstances:
 
-- **AI Model Providers:** Google Gemma API receives your prompts in real-time to generate responses.
+- **AI Model Providers:** Sarvam 105b API receives your prompts in real-time to generate responses.
 - **Authentication Providers:** Clerk processes your email and User ID for authentication.
 - **Infrastructure Providers:** Vercel (hosting), MongoDB (database), and Upstash Redis (caching).
 - **Analytics Providers:** Google Analytics and Vercel Web Analytics collect anonymous usage data.
@@ -171,7 +171,7 @@ If any provision of this Privacy Policy is found to be invalid, illegal, or unen
 4. Google Analytics. Available at: https://analytics.google.com/
 5. Vercel. Available at: https://vercel.com/
 6. Upstash Redis. Available at: https://upstash.com/
-7. Google Gemma API. Available at: https://ai.google.dev/models/gemma
+7. Sarvam 105b API. Available at: https://www.sarvam.ai/privacy-policy
 8. MongoDB. Available at: https://www.mongodb.com/
 9. Serper API. Available at: https://serper.dev/
 10. Wikipedia. Available at: https://www.wikipedia.org
